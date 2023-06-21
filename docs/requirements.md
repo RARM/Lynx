@@ -510,16 +510,21 @@ input or behavior playing games.
         7.2.2. System searches through a database and displays an array of games based
         on the criteria
 8. Community
+
     8.1. Users can engage in the community page, where they can engage in video game
     news and create threads.
+
     8.2. Community Sequence
+
         8.2.1. User selects the community page
         8.2.2. User shall have the choice between the news or threads subpage
         8.2.3. User engages content and scrolls down to the comments
         8.2.4. User creates a comment and sends
         8.2.5. System records the information and posts the comment on the news
         board/thread
+
     8.3. Developers can create update logs on their games.
+    
     8.4. Developer Sequence
         8.4.1. Developer creates an update log
         8.4.2. System creates a page to which the developer can customize to their liking
