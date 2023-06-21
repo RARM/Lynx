@@ -49,46 +49,73 @@ purchase it.
 
 1. Description: This use case describes the process of how a user will purchase an indie
 game on the Lynx platform.
+
 2. Actors:
+
     2.1. User
+
     2.2. Lynx Platform
+
 3. Preconditions:
+
     3.1. User has an active Lynx account and is logged in via Wi-Fi.
+
     3.2. The platform is available.
+
 4. Primary Flow of Events:
+
     4.1. User logs into the Lynx platform.
+
     4.2. User navigates to the indie games section on the store page.
+
     4.3. User selects an indie game they are interested in.
+
     4.4. User views the game details.
+
     4.5. User decides to purchase the game and completes the transaction.
+
     4.6. Game appears in the user’s library and downloaded on computer.
+
     4.7. Terminate Use Case - Purchasing Indie Games.
+
 5. Alternate Flows:
     5.1. User is not logged into Lynx account (from Primary Flow 4.1)
+
         5.1.1. System asks for user’s login information
             5.1.1.1. If user has not created an account, go to Alternative Flow 5.2
+
         5.1.2. User inputs login information
+
         5.1.3. System validates login information
             5.1.3.1. If login information is invalid, return to step 5.1.1
+
         5.1.4. End Alternative Flow 5.1 - Return to Primary Flow, step 4.2
+
     5.2. User has not created an account yet (from Alternative Flow 5.1.1.1)
+
         5.2.1. System asks user to make an account
             5.2.1.1. If user doesn’t wish to create account, End Alternative Flow 5.2,
             return to primary flow 4.7
+
         5.2.2. User pressed the Create Account button
         5.2.3. An account creation form is provided to the user by the system
         5.2.4. User fills in form and presses Submit button.
         5.2.5. System creates a new member account and enters it into the database
         5.2.6. End Alternative Flow - return to Primary Flow, step 2
+
     5.3. User does not want current game (from Alternative Flow 4.4)
+
         5.3.1. User clicks on Back button or returns to store page
         5.3.2. End Alternative Flow - return to Primary Flow, step 3
+
     5.4. User payment information is invalid (from Alternative Flow 4.5)
+
         5.4.1. System asks user to re-enter payment information or change payment
         method
             5.4.1.1. If user payment methods are continuously declined and the user
             cannot complete the transaction, End Alternative Flow 5.4, return
             to primary flow 4.7
+
         5.4.2. System verifies payment information and the transaction is completed.
         5.4.3. End Alternative Flow - return to Primary Flow, step 6
 
@@ -100,50 +127,78 @@ options.
 
 1. Description: This use case describes the process of how a game developer will access
 features to support the creation and managing of their video game or software.
+
 2. Actors:
+
     2.1. Game Developer
+
     2.2. Lynx Platform
+
 3. Preconditions:
+
     3.1. Game Developer has an active Lynx Developer Account and is logged in via
     Wi-Fi.
+
     3.2. The Developer has published or is in the process of publishing a game.
+
     3.3. The platform is available and functioning.
+
 4. Primary Flow of Events:
+
     4.1. Game Developer logs into the Lynx Platform via Developer Account.
+
     4.2. Game Developer navigates to their game’s page.
+
     4.3. Game Developer selects the feature desired to add or edit for game (e.g., technical
     support, creating community post, publishing game changes, and creating
     fund-raisers for the game)
+
     4.4. Game Developer presses Submit button to save changes to the Lynx database.
+
     4.5. System saves changes to the Lynx database.
+
     4.6. Terminate Use Case - Game Developer Features
+
 5. Alternative Flows:
+
     5.1. Developer is not logged into Lynx account (from Primary Flow 4.1)
+
         5.1.1. System asks for Developer’s login information
             5.1.1.1. If user has not created an account, go to Alternative Flow 5.2
+
         5.1.2. Developer inputs login information
+
         5.1.3. System validates login information
             5.1.3.1. If login information is invalid, return to step 5.1.1
+
         5.1.4. End Alternative Flow 5.1 - Return to Primary Flow, step 4.2
+
     5.2. Developer has not created an account yet (from Alternative Flow 5.1.1.1)
+
         5.2.1. System asks Developer to make an account
             5.2.1.1. If Developer doesn’t wish to create account, End Alternative Flow
             5.2, return to primary flow 4.6
+
         5.2.2. Developer pressed the Create Account button
         5.2.3. An account creation form is provided to the user by the system
         5.2.4. Developer fills in form and presses Submit button.
         5.2.5. System creates a new account and enters it into the database.
         5.2.6. End Alternative Flow - return to Primary Flow, step 2
+
     5.3. Developer has not created a game or software yet (from Alternative Flow 4.2)
+
         5.3.1. Developer clicks on Create Game button
             5.3.1.1. If Developer doesn’t wish to create a game, End Alternative Flow
             5.3, return to primary flow 4.6
+
         5.3.2. System asks Developer to fill in Game Creation form
         5.3.3. System asks Developer to upload game files to Lynx database
+
         5.3.4. Lynx staff receives the Developer’s game form and files to review and
         verify
             5.3.4.1. If Lynx staff does not approve of the game submission, return to
             step 5.3.1
+
         5.3.5. Lynx staff approves of the game and uploads it to the database and store
         page
         5.3.6. The Developer’s game becomes editable on the game page
@@ -157,21 +212,37 @@ access the game details, then press the Play button to launch it on their comput
 
 1. Description: This use case describes the process of how a user will purchase an indie
 game on the Lynx platform.
+
 2. Actors:
+
     2.1. User
+
     2.2. Lynx Platform
+
 3. Preconditions:
+
     3.1. User has an active Lynx account and is logged in via Wi-Fi.
+
     3.2. The platform is available and functioning.
+
     3.3. User owns at least one game purchased from the Lynx Store
+
 4. Primary Flow of Events:
+
     4.1. User logs into the Lynx platform
+
     4.2. User navigates to Game Library page.
+
     4.3. User selects game they want to play
+
     4.4. User clicks on the Play button to launch the game
+
     4.5. Lynx Platform launches the game
+
     4.6. Terminate Use Case - Launching and Playing Games from Library
+
 5. Alternative Flows:
+
     5.1. User is not logged into Lynx account (from Primary Flow 4.1)
         5.1.1. System asks for user’s login information
             5.1.1.1. If user has not created an account, go to Alternative Flow 5.2
@@ -179,20 +250,24 @@ game on the Lynx platform.
         5.1.3. System validates login information
             5.1.3.1. If login information is invalid, return to step 5.1.1
         5.1.4. End Alternative Flow 5.1 - Return to Primary Flow, step 4.2
+
     5.2. User has not created an account yet (from Alternative Flow 5.1.1.1)
         5.2.1. System asks user to make an account
             5.2.1.1. If user doesn’t wish to create account, End Alternative Flow 5.2,
             return to primary flow 4.6
+
         5.2.2. User pressed the Create Account button
         5.2.3. An account creation form is provided to the user by the system
         5.2.4. User fills in form and presses Submit button.
         5.2.5. System creates a new member account and enters it into the database
         5.2.6. End Alternative Flow - return to Primary Flow, step 4.2
+
     5.3. User has lost access to previously owned game in Library due to refunding (from
     Alternative Flow 4.3)
         5.3.1. System redirects user back to the store page for the game to purchase
         again in order to play
             5.3.1.1. If the user does not wish to purchase the game, return to step 4.2
+
         5.3.2. User decides to Purchase the game, go to Use Case - Purchasing Indie
         Games Primary Flow step 4.5
         5.3.3. End Alternative Flow - return to Primary Flow, step 4.4
@@ -208,21 +283,28 @@ community on the Lynx platform.
 2. Actors:
 
     2.1. User
+
     2.2. Lynx Platform
 
 3. Preconditions:
 
     3.1. User has an active Lynx account and is logged in via Wi-Fi.
+
     3.2. The platform is available and functioning.
 
 4. Primary Flow of Events:
 
     4.1. User logs into the Lynx platform
+
     4.2. User navigates to the community section
+
     4.3. User browses through the available communities
+
     4.4. User selects a community that aligns with their interests and joins it.
+
     4.5. The database adds the user to the list of community members, allowing the user to
     participate in discussions and events.
+
     4.6. Terminate Use Case - Accessing Gaming Communities
 
 5. Alternative Flows:
