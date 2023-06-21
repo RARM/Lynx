@@ -591,8 +591,10 @@ It will be used for personal communication, asking members for assistance, and t
 meeting place for scrums with voice and video call capabilities.
 
 3. VSCode: The IDE/Code editor that will be used by our development team.
-a. C++: will be used for backend development
-b. JavaScript/CSS/HTML: will be used for client side development
+
+    3a. C++: will be used for backend development
+
+    3b. JavaScript/CSS/HTML: will be used for client side development
 
 4. CppCMS: A web development framework that uses C++. Will be used for backend
 development.
