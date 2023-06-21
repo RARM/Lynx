@@ -204,13 +204,19 @@ through the available gaming communities and join one that matches their interes
 
 1. Description: This use case describes the process of how a user will join a gaming
 community on the Lynx platform.
+
 2. Actors:
+
     2.1. User
     2.2. Lynx Platform
+
 3. Preconditions:
+
     3.1. User has an active Lynx account and is logged in via Wi-Fi.
     3.2. The platform is available and functioning.
+
 4. Primary Flow of Events:
+
     4.1. User logs into the Lynx platform
     4.2. User navigates to the community section
     4.3. User browses through the available communities
@@ -218,13 +224,14 @@ community on the Lynx platform.
     4.5. The database adds the user to the list of community members, allowing the user to
     participate in discussions and events.
     4.6. Terminate Use Case - Accessing Gaming Communities
+
 5. Alternative Flows:
 
     5.1. User is not logged into Lynx account (from Primary Flow 4.1)
 
         5.1.1. System asks for user’s login information
-
             5.1.1.1. If user has not created an account, go to Alternative Flow 5.2
+
         5.1.2. User inputs login information
         5.1.3. System validates login information
 
@@ -236,7 +243,7 @@ community on the Lynx platform.
         5.2.1. System asks user to make an account
             5.2.1.1. If user doesn’t wish to create account, End Alternative Flow 5.2,
             return to primary flow 4.6
-            
+
         5.2.2. User pressed the Create Account button
         5.2.3. An account creation form is provided to the user by the system
         5.2.4. User fills in form and presses Submit button.
