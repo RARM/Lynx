@@ -221,17 +221,22 @@ community on the Lynx platform.
 5. Alternative Flows:
 
     5.1. User is not logged into Lynx account (from Primary Flow 4.1)
+
         5.1.1. System asks for user’s login information
+
             5.1.1.1. If user has not created an account, go to Alternative Flow 5.2
         5.1.2. User inputs login information
         5.1.3. System validates login information
+
             5.1.3.1. If login information is invalid, return to step 5.1.1
         5.1.4. End Alternative Flow 5.1 - Return to Primary Flow, step 4.2
-        
+
     5.2. User has not created an account yet (from Alternative Flow 5.1.1.1)
+
         5.2.1. System asks user to make an account
             5.2.1.1. If user doesn’t wish to create account, End Alternative Flow 5.2,
             return to primary flow 4.6
+            
         5.2.2. User pressed the Create Account button
         5.2.3. An account creation form is provided to the user by the system
         5.2.4. User fills in form and presses Submit button.
