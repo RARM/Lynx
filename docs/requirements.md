@@ -343,6 +343,18 @@ Features, Support for Developers, Revenue Model, Data Privacy) and three additio
 (1=bad, 2=poor, 3=fair, 4=good, 5=outstanding) for each feature, Lynx will be compared against
 its top five competitors.
 
+|                              | Lynx | Steam | Itch.io | GOG.com | Humble Store | Epic Games |
+| ---------------------------- | ---- | ----- | ------- | ------- | ------------ | ---------- |
+| Store Page:                  | 5    | 5     | 4       | 3       | 4            | 3          |
+| User Experience & Interface: | 4    | 4     | 2       | 3       | 3            | 3          |
+| Community Features:          | 5    | 3     | 3       | 3       | 1            | 2          |
+| Support for Developers:      | 5    | 3     | 5       | 3       | 4            | 3          |
+| Revenue Model:               | 4    | 3     | 2       | 3       | 3            | 3          |
+| Data Privacy:                | 5    | 5     | 5       | 4       | 5            | 2          |
+| Indie Game Focus & Variety:  | 5    | 3     | 5       | 2       | 2            | 2          |
+| User Recommendations:        | 5    | 4     | 3       | 3       | 4            | 3          |
+| Cosmetics:                   | 5    | 3     | 1       | 2       | 1            | 2          |
+| Mean:                        | 4.75 | 4.13  | 3.75    | 3.25    | 3.38         | 2.88       |
 
 Lynx (4.75) https://lynxgamestore.com/
 The Lynx game store page will be designed to be both attractive and user-friendly,
@@ -425,69 +437,69 @@ usernames, calls into question the measures they have in place when it comes to 
 
 ## Data Definition
 
-- Storefront. It is a digital store. In this context, a store for games and other software
+- **Storefront.** It is a digital store. In this context, a store for games and other software
 available on the platform.
 
-- Digital Distribution Service. It is a service (software) for distributing goods or services.
+- **Digital Distribution Service.** It is a service (software) for distributing goods or services.
 In this context, our storefront is a digital distribution service.
 
-- Lynx Platform. It is the set of the Lynx server, website, and client. Together, they
+- **Lynx Platform.** It is the set of the Lynx server, website, and client. Together, they
 provide the service of purchasing and accessing indie games.
 
-- Lynx Server. This component is the backend module (living in a server) that serves as
+- **Lynx Server.** This component is the backend module (living in a server) that serves as
 the central system. It keeps track of all user, developer, game, and community records.
 
-- Lynx website. The Lynx website is just a web location that allows users to download the
+- **Lynx website.** The Lynx website is just a web location that allows users to download the
 client. It does not provide any other service. Navigating, purchasing, or installing games
 (including using communities) requires the Lynx client.
 
-- Lynx client. It refers to the client application installed in the user and developer's
+- **Lynx client.** It refers to the client application installed in the user and developer's
 computer. It is a service that allows the user to purchase and download games. They can
 also use communities and launch their games (purchased from Lynx) there. Developers
 can manage and upload their games through the Lynx client as well.
 
-- Indie Games. They are games created independently by one person or small teams
+- **Indie Games.** They are games created independently by one person or small teams
 without the financial support of large corporations.
 
-- AAA Games. These are games created by mid-size or large game publishers. These have
+- **AAA Games.** These are games created by mid-size or large game publishers. These have
 a more extensive budget and teams.
 
-- Game Developer. It refers to a small team or a single person (actor) considering
+- **Game Developer.** It refers to a small team or a single person (actor) considering
 publishing games they create on the Lynx platform.
 
-- User. This actor is the person who will be using the platform to purchase and download
+- **User.** This actor is the person who will be using the platform to purchase and download
 games. They may also use the communities to engage with other actors with the same
 interests.
 
-- Lynx Account. It represents (data) the system's most basic actor (neither a Lynx staff nor
+- **Lynx Account.** It represents (data) the system's most basic actor (neither a Lynx staff nor
 a developer). It can have minimal interaction with the system (purchasing, downloading,
 playing games, and using communities). They could also create and manage communities
 they own.
 
-- Developer Account. It represents an actor with more privileges than the usual Lynx
+- **Developer Account.** It represents an actor with more privileges than the usual Lynx
 account. A developer account can also upload and manage games. Moreover, they can
 also manage communities linked to their games in addition to standard communities.
 
-- Lynx Staff Account. This account represents the actor with the most privileges in the
+- **Lynx Staff Account.** This account represents the actor with the most privileges in the
 system. They approve games and serve as moderators on the Lynx platform.
 
-- Library. Every Lynx Account (including developers and staff) has a library linked to the
+- **Library.** Every Lynx Account (including developers and staff) has a library linked to the
 account. The library is a collection of games purchased by the actor.
 
-- Game. It refers to the computer software sold through the Lynx platform. Developers can
+- **Game.** It refers to the computer software sold through the Lynx platform. Developers can
 publish them, and users can buy them. Games can also have communities linked to them.
 
-- Community. It is a service for developers and typical users to engage. It allows them to
+- **Community.** It is a service for developers and typical users to engage. It allows them to
 share messages and experiences.
 
-- Search. The Lynx system provides this service through the Lynx client. Actors can
+- **Search.** The Lynx system provides this service through the Lynx client. Actors can
 search games by name or description.
 
-- Filter. It is a service that works with the search or on the user's homepage. It provides a
+- **Filter.** It is a service that works with the search or on the user's homepage. It provides a
 way of filtering a list of games to match specific characteristics (e.g., genre, price, tags)
 or user preferences.
 
-- User preferences. It is the data in the Lynx system about the user linkings based on their
+- **User preferences.** It is the data in the Lynx system about the user linkings based on their
 input or behavior playing games.
 
 
