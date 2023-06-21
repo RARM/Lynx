@@ -504,11 +504,14 @@ input or behavior playing games.
     7.1. User can search owned games from their Lynx and linked DDS accounts. The
     user can also use the search bar in the Storefront to find games of their choosing.
     They can also filter the search by genre, price, indie/AAA, and/or date of release.
+
     7.2. Sequence
+
         7.2.1. User enters search criteria (genre, price, indie/AAA, Date) into the search
         bar
         7.2.2. System searches through a database and displays an array of games based
         on the criteria
+        
 8. Community
 
     8.1. Users can engage in the community page, where they can engage in video game
@@ -524,8 +527,9 @@ input or behavior playing games.
         board/thread
 
     8.3. Developers can create update logs on their games.
-    
+
     8.4. Developer Sequence
+
         8.4.1. Developer creates an update log
         8.4.2. System creates a page to which the developer can customize to their liking
 
