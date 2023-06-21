@@ -219,6 +219,7 @@ community on the Lynx platform.
     participate in discussions and events.
     4.6. Terminate Use Case - Accessing Gaming Communities
 5. Alternative Flows:
+
     5.1. User is not logged into Lynx account (from Primary Flow 4.1)
         5.1.1. System asks for user’s login information
             5.1.1.1. If user has not created an account, go to Alternative Flow 5.2
@@ -226,6 +227,7 @@ community on the Lynx platform.
         5.1.3. System validates login information
             5.1.3.1. If login information is invalid, return to step 5.1.1
         5.1.4. End Alternative Flow 5.1 - Return to Primary Flow, step 4.2
+        
     5.2. User has not created an account yet (from Alternative Flow 5.1.1.1)
         5.2.1. System asks user to make an account
             5.2.1.1. If user doesn’t wish to create account, End Alternative Flow 5.2,
@@ -431,7 +433,7 @@ input or behavior playing games.
     1.3. Function requirement label
 
         1.3.1. REQ 1.1 Login/Account System
-        
+
 2. Link DDSs to your account (Steam, Epic, Uplay, etc.)
 
     2.1. User should be able to link accounts that they have with other digital distribution
