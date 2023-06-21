@@ -398,6 +398,7 @@ input or behavior playing games.
 ## Functional Requirements
 
 1. Lynx Account System
+
     1.1. User should be able to sign up for an account on Lynx. To sign up, the user would
     enter their username, email, password, phone number, DOB, full name, gender
     and security question(s). If a user forgets their username and password, they can
@@ -408,7 +409,9 @@ input or behavior playing games.
     is empty. The required fields are First name, Last name, Username, Password,
     Email, Date of Birth (DOB), Phone Number and/or Security Question and
     Security Answer.
+
     1.2. Sequence
+
         1.2.1. User enters first name
         1.2.2. User enters last name
         1.2.3. User enters DOB
@@ -423,15 +426,20 @@ input or behavior playing games.
         1.2.11. System will store their Full name, Phone number and/or answer to selected
         security question
         1.2.12. System will confirm to the user that the account was created
-        13
         1.2.13. System will redirect them back into the login page
+
     1.3. Function requirement label
+
         1.3.1. REQ 1.1 Login/Account System
+        
 2. Link DDSs to your account (Steam, Epic, Uplay, etc.)
+
     2.1. User should be able to link accounts that they have with other digital distribution
     services so that they can be able to manage and access their accounts as well as
     any games that they own in that particular DDS.
+
     2.2. Sequence
+
         2.2.1. System displays all known DDSs and asks if they want to integrate into
         Lynx
         2.2.2. User selects the DDS to integrate
@@ -439,31 +447,45 @@ input or behavior playing games.
         2.2.4. User logs in their credentials with the selected DDS
         2.2.5. System stores the information into a separate database
         2.2.6. User can now log in using their Lynx account or linked DDS account(s)
+
 3. Library
+
     3.1. Users and Developers that have a Lynx account will have a library of owned
     games from both Lynx and other DDSs that they can play from.
+
     3.2. Sequence
+
         3.2.1. User/Developer is automatically redirected to the Library page
         3.2.2. User/Developer selects a game to play of their choosing
         3.2.3. System activates the client and launches the game. If the game is from
         another DDS, the system launches the DDS first and then launch the game
         from the DDS.
+
 4. Indie Game Showcase
+
     4.1. User should be able to access a page where upcoming and popular indie games
     are displayed and shown for users to engage in.
+
     4.2. Sequence
+
         4.2.1. User selects the Indie Game Showcase
         4.2.2. System displays a wide range of indie games
+
     4.3. There should be a playable demo that the user can download if the user wants to
     test the game.
+
     4.4. Sequence
+
         4.4.1. User selects an indie game of their choosing
         4.4.2. System displays a store page of the game as well as a download link for a
         demo of the game
+
     4.5. If the user likes the game, then they should be able to give a rating based on what
     qualities they enjoy about the game and/or donate to the developers to help aid
     them in development.
+
     4.6. Sequence
+
         4.6.1. User finishes playing the indie game
         4.6.2. System will pop out a window that asks for a rating from 1 to 5 as well as
         a text box so that the user can praise or give criticism for a game
@@ -472,6 +494,7 @@ input or behavior playing games.
         well as send a copy of the review to the creators by email
         4.6.5. If system does not detect information in the review section, it redirects the
         user back to the tab of their choosing.
+
 5. Storefront
 
     5.1. User should be able to access a storefront where indie and AAA games are
@@ -491,7 +514,7 @@ input or behavior playing games.
         5.4.1. User selects the marketplace tab
         5.4.2. System displays a self-rotating mini page in which indie games that are the
         most popular and/or sponsored gain attention
-        
+
 6. Customer Support
 
     6.1. When needed, the user should be able to access support from officials on any
