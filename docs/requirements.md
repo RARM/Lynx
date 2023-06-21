@@ -473,23 +473,33 @@ input or behavior playing games.
         4.6.5. If system does not detect information in the review section, it redirects the
         user back to the tab of their choosing.
 5. Storefront
+
     5.1. User should be able to access a storefront where indie and AAA games are
     available to buy.
+
     5.2. Sequence
+
         5.2.1. User selects the marketplace tab
         5.2.2. System transports them to a marketplace where users can buy indie games
         as well as AAA games
+
     5.3. There should be a feature page that primarily shows indie titles and when clicked
-    transports the User to the featured games’ page
+    transports the User to the featured games’ page.
+
     5.4. Sequence
+
         5.4.1. User selects the marketplace tab
         5.4.2. System displays a self-rotating mini page in which indie games that are the
         most popular and/or sponsored gain attention
+        
 6. Customer Support
+
     6.1. When needed, the user should be able to access support from officials on any
     questions and dilemmas that the user faces. The user has an option of filling out a
     form or an email. System should send one of those options to customer support.
+
     6.2. Sequence
+
         6.2.1. User selects the Help tab
         6.2.2. System displays them two buttons, one that transports them to the form
         and one that allows them to send an email.
@@ -500,7 +510,9 @@ input or behavior playing games.
         6.2.7. System informs user that the form/email is sent
         6.2.8. System redirects the user back to the main hub after clicking “Ok” from
         the system message
+
 7. Search/Filter
+
     7.1. User can search owned games from their Lynx and linked DDS accounts. The
     user can also use the search bar in the Storefront to find games of their choosing.
     They can also filter the search by genre, price, indie/AAA, and/or date of release.
@@ -511,7 +523,7 @@ input or behavior playing games.
         bar
         7.2.2. System searches through a database and displays an array of games based
         on the criteria
-        
+
 8. Community
 
     8.1. Users can engage in the community page, where they can engage in video game
