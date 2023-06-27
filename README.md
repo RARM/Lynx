@@ -10,4 +10,5 @@
 ## Directory Structure
 * `src`: It includes the source code for the project.
 * `tests`: Automated tests for the project.
+* `site`: Contains the source code for the main website (it only serves static files).
 * `docs`: Documentation for the project (requirements, design, code reference, etc.).
