@@ -13,6 +13,8 @@ Our goal at Lynx is to create a platform that respects and supports both users a
 ## Getting Started
 The Lynx Client is in its early prototype phase. The prototype is viewable through pdf, but is not interactable. The interactable prototype, which uses Figma, is available through the following link: https://www.figma.com/proto/sy1Ynb5VuXwE8MsZPXS4JR/
 
+The current website for Lynx is available at https://lynxgamestore.com/ . However, the download link is not yet working.
+
 ## Contributing
 
 Lynx Team is made up of the following contributors and roles:
