@@ -1,0 +1,23 @@
+{
+  "name": "lynx-client",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RARM/Lynx.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/RARM/Lynx/issues"
+  },
+  "homepage": "https://github.com/RARM/Lynx#readme",
+  "devDependencies": {
+    "electron": "^25.2.0"
+  }
+}

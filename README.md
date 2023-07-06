@@ -30,7 +30,6 @@ Front-End Lead Developer - Cody Smith
 GitHub Master - Normil Luccin
 
 ## Directory Structure
-* `src`: It includes the source code for the project.
-* `tests`: Automated tests for the project.
 * `site`: Contains the source code for the main website (it only serves static files).
+* `server`: It contains the source code for the Lynx client. It runs on Django (use the requirements.txt file to create a virtual environment with the required packages).
 * `docs`: Documentation for the project (requirements, design, code reference, etc.).
