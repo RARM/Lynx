@@ -32,4 +32,5 @@ GitHub Master - Normil Luccin
 ## Directory Structure
 * `site`: Contains the source code for the main website (it only serves static files).
 * `server`: It contains the source code for the Lynx client. It runs on Django (use the requirements.txt file to create a virtual environment with the required packages).
+* `client`: It has the source code for the Lynx client.
 * `docs`: Documentation for the project (requirements, design, code reference, etc.).
