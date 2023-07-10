@@ -15,22 +15,34 @@ The Lynx Client is in its early prototype phase. The prototype is viewable throu
 
 The current website for Lynx is available at https://lynxgamestore.com/ . However, the download link is not yet working.
 
-## Contributing
-
+## Team
 Lynx Team is made up of the following contributors and roles:
-
-Scrum Master - Rodolfo Andres Rivas Matta
-
-Product Owner - Mike Clopton
-
-Backend Team Lead - Hunter Bresler
-
-Front-End Lead Developer - Cody Smith
-
-GitHub Master - Normil Luccin
+- Scrum Master - Rodolfo Andres Rivas Matta
+- Product Owner - Mike Clopton
+- Backend Team Lead - Hunter Bresler
+- Front-End Lead Developer - Cody Smith
+- GitHub Master - Normil Luccin
 
 ## Directory Structure
 * `site`: Contains the source code for the main website (it only serves static files).
 * `server`: It contains the source code for the Lynx client. It runs on Django (use the requirements.txt file to create a virtual environment with the required packages).
 * `client`: It has the source code for the Lynx client.
 * `docs`: Documentation for the project (requirements, design, code reference, etc.).
+
+## Development
+### Backend
+The Lynx server runs on Linux, Apache2, and Python. It uses the Django REST Framework (DRF). To set up your local development environment, follow these steps:
+1. Install you have Python installed. To check your Python installation, run: `python --version`
+1. Create a Python virtual environment in your local repository. The path `venv` is already ignored in the '.gitignore' file. You can create the environment using this command: [command]
+1. Activate your local environment.
+1. Install all required packages running: `pip install -r requirements.txt`
+1. If you make changes to the list of packages for the environment, save them with this command: `pip freeze > requirements.txt`
+1. Navigate to the `server` directory.
+1. **To run the application**, enter: `python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000`
+
+### Front-end
+The Lynx client runs on Electron and is supposed to run only on Windows computers. Follow these steps to set up your local development environment:
+1. Install NodeJS. Check your installation by running: `node -v`
+1. Navitage to the `client` directory.
+1. Install all required packages using this command: `npm install`
+1. **To run the application**, enter: `npm start`
