@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'api.lynx.vm',
-    'api.lynxgamestore.com'
+    'api.lynxgamestore.com',
+    '127.0.0.1'
 ]
 
 
@@ -41,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'demo'
+    'helloworld'
 ]
 
 MIDDLEWARE = [
