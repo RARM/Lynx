@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-goll6zw^8c5jp2sm+flgsjcsi-m)@e=2u+6$^)@-+$$!#bo#+j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'api.lynx.vm',
+    'api.lynxgamestore.com'
+]
 
 
 # Application definition
