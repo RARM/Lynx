@@ -33,7 +33,7 @@ Lynx Team is made up of the following contributors and roles:
 ### Backend
 The Lynx server runs on Linux, Apache2, and Python. It uses the Django REST Framework (DRF). To set up your local development environment, follow these steps:
 1. Install you have Python installed. To check your Python installation, run: `python --version`
-1. Create a Python virtual environment in your local repository. The path `venv` is already ignored in the `sou.gitignore` file. You can create the environment using this command: `python3 -m venv venv`
+1. Create a Python virtual environment in your local repository. The path `venv` is already ignored in the `.gitignore` file. You can create the environment using this command: `python3 -m venv venv`
 1. Activate your local environment.
 1. Install all required packages running: `pip install -r requirements.txt`
 1. If you make changes to the list of packages for the environment, save them with this command: `pip freeze > requirements.txt`
