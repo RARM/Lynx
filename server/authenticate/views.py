@@ -2,6 +2,12 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
+
+@csrf_exempt
+def my_view(request):
+    return HttpResponse('Hello world')
 
 # Create your views here.
 def signin(request):
