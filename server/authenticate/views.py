@@ -21,6 +21,7 @@ def signin(request):
 
 
 def signup(request):
+    
     if request.method == "POST":
         username = request.POST['username']
         fname = request.POST['fname']
@@ -31,11 +32,11 @@ def signup(request):
 
         if User.objects.filter(username=username):
             messages.error(request, "That username already exists. Please try another one.")
-            redirect('signup')
+            return redirect('signup')
 
         if User.objects.filter(email=email):
             messages.error(request, "That email already. Please try another one.")
-            redirect('signup')
+            return redirect('signup')
 
         if len(username) > 15:
             messages.error(request, "Username is too long.")
@@ -59,4 +60,4 @@ def signup(request):
 def signout(request):
     logout(request)
     messages.success(request, "Logged out successfully.")
-    redirect('signin')
+    return redirect('signin')
