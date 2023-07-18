@@ -18,5 +18,5 @@ def signup(request):
         password = request.POST['password']
         passwordConfirm = request.POST['passwordConfirm']
 
-    myuser
+    myuser = User.objects.create(username, email, password)
 
