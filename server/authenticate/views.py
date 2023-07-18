@@ -37,6 +37,15 @@ def signup(request):
             messages.error(request, "That email already. Please try another one.")
             redirect('signup')
 
+        if len(username) > 15:
+            messages.error(request, "Username is too long.")
+
+        if password != passwordConfirm:
+            messages.error(request, "Passwords don't match.")
+
+        if not username.isalnum():
+            messages.error(request, "Username must be alpha-numeric.")
+
         myuser = User.objects.create_user(username, email, password)
         myuser.first_name = fname
         myuser.last_name = lname
