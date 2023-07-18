@@ -7,10 +7,8 @@
     <title>Sign Up</title>
 </head>
 <body>
-
-
     <h3>Create your account!</h3>
-    <form method="post" action="/signup">
+    <form method="post" id="signup-form">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" class="form-control" id="username" name="username" placeholder="Create A Username (use only letters and numbers)" Required>
@@ -37,5 +35,8 @@
         </div>
         <button type="submit" class="btn btn-primary">Sign Up</button>
     </form>
+    <p id="msg"></p>
+    <script src="signup.js"></script>
+    <script src="renderer.js"></script>
 </body>
 </html>
