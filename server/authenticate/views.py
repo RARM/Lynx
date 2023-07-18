@@ -17,9 +17,11 @@ def signin(request):
 
         if user is not None:
             login(request, user)
+            return JsonResponse({"message": "You have successfully logged in."}, status=201)
             return redirect('discover')
         else:
-            messages.error(request, "Login not found")
+            #messages.error(request, "Login not found")
+            return JsonResponse({"error": "Login not found"}, status=400)
             return redirect('signin')
 
 @csrf_exempt
@@ -57,5 +59,6 @@ def signup(request):
 @csrf_exempt   
 def signout(request):
     logout(request)
+    return JsonResponse({"message": "You have logged in successfully."}, status=201)
     messages.success(request, "Logged out successfully.")
     return redirect('signin')
