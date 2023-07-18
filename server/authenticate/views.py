@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from django.contrib.auth.model import User
+from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 
@@ -30,6 +30,14 @@ def signup(request):
         email = request.POST['email']
         password = request.POST['password']
         passwordConfirm = request.POST['passwordConfirm']
+
+        if User.objects.filter(username=username):
+            messages.error(request, "That username already exists. Please try another one.")
+            redirect('signup')
+
+        if User.objects.filter(email=email):
+            messages.error(request, "That email already. Please try another one.")
+            redirect('signup')
 
         myuser = User.objects.create_user(username, email, password)
         myuser.first_name = fname
