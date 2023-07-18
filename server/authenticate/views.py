@@ -2,6 +2,8 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.http import JsonResponse
+
 
 # Create your views here.
 def signin(request):
@@ -29,32 +31,27 @@ def signup(request):
         password = request.POST['password']
         passwordConfirm = request.POST['passwordConfirm']
 
-        if User.objects.filter(username=username):
-            messages.error(request, "That username already exists. Please try another one.")
-            redirect('signup')
+        if User.objects.filter(username=username).exists():
+            return JsonResponse({"error": "That username already exists. Please try another one."}, status=400)
 
-        if User.objects.filter(email=email):
-            messages.error(request, "That email already. Please try another one.")
-            redirect('signup')
+        if User.objects.filter(email=email).exists():
+            return JsonResponse({"error": "That email is already in use. Please try another one."}, status=400)
 
         if len(username) > 15:
-            messages.error(request, "Username is too long.")
+            return JsonResponse({"error": "Username is too long."}, status=400)
 
         if password != passwordConfirm:
-            messages.error(request, "Passwords don't match.")
+            return JsonResponse({"error": "Passwords don't match."}, status=400)
 
         if not username.isalnum():
-            messages.error(request, "Username must be alpha-numeric.")
+            return JsonResponse({"error": "Username must be alpha-numeric."}, status=400)
 
         myuser = User.objects.create_user(username, email, password)
         myuser.first_name = fname
         myuser.last_name = lname
-        myuser.email = email
-
         myuser.save()
 
-        messages.success(request, "Your account has been created.")
-        return redirect('signin')
+        return JsonResponse({"message": "Your account has been created."}, status=201)
     
 def signout(request):
     logout(request)
