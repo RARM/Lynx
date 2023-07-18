@@ -3,12 +3,9 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_exempt
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 
 @csrf_exempt
-def my_view(request):
-    return HttpResponse('Hello world')
-
 # Create your views here.
 def signin(request):
 
@@ -25,7 +22,7 @@ def signin(request):
             messages.error(request, "Login not found")
             return redirect('signin')
 
-
+@csrf_exempt
 def signup(request):
     if request.method == "POST":
         username = request.POST['username']
@@ -57,7 +54,8 @@ def signup(request):
 
         return JsonResponse({"message": "Your account has been created."}, status=201)
     
+@csrf_exempt   
 def signout(request):
     logout(request)
     messages.success(request, "Logged out successfully.")
-    redirect('signin')
+    return redirect('signin')
