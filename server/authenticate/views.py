@@ -3,8 +3,6 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 
-from server import authenticate
-
 # Create your views here.
 def signin(request):
 
