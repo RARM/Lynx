@@ -1,0 +1,36 @@
+body {
+    padding-top: 200px;
+    background-image: url("Images/Library.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    color: #444;
+}
+
+#nav-bar {
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+#nav-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+#nav-bar a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+}
