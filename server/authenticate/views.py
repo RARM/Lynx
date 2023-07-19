@@ -17,12 +17,14 @@ def signin(request):
 
         if user is not None:
             login(request, user)
-            return JsonResponse({"message": "You have successfully logged in."}, status=201)
-            return redirect('discover')
+            return JsonResponse({
+                "message": "You have successfully logged in.",
+                "first_name": user.first_name,
+                "last_name": user.last_name
+            }, status=201)
         else:
             #messages.error(request, "Login not found")
             return JsonResponse({"error": "Login not found"}, status=400)
-            return redirect('signin')
 
 @csrf_exempt
 def signup(request):
