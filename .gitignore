@@ -3,3 +3,4 @@ __pycache__/
 node_modules/
 server/db.sqlite3
 .DS_Store
+client/out
