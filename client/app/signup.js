@@ -19,10 +19,11 @@ document.getElementById('signup-form').addEventListener('submit', function(event
 
   var formData = new FormData();
   formData.append('username', username);
-  formData.append('first_name', fname);
-  formData.append('last_name', lname);
+  formData.append('fname', fname);
+  formData.append('lname', lname);
   formData.append('email', email);
   formData.append('password', password1);
+  formData.append('passwordConfirm', password2);
   
   fetch('https://api.lynxgamestore.com/auth/signup', {
     method: 'POST',
@@ -32,12 +33,13 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
-    return response.text();
+    return response.json();
   })
   .then(text => {
     // Signup was successful.
+    debugger;
     message_box.innerHTML = "Signup successful, redirecting to login page...";
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
   })
   .catch(error => {
     // Display the error message.

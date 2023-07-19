@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain, contextBridge } = require('electron')
 const path = require('path')
 
 function createWindow () {
@@ -41,3 +41,21 @@ app.on('window-all-closed', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+let user = {
+  'fname': 'Sponge',
+  'lname': 'Bob'
+};
+
+ipcMain.handle('getfname', async (event, arg) => {
+  return new  Promise(function(resolve, reject) {
+    resolve(user.fname);
+  });
+});
+
+ipcMain.handle('savefname', async (event, name) => {
+  return new  Promise(function(resolve, reject) {
+    user.fname = name;
+    resolve(true);
+  });
+});

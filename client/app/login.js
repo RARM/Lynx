@@ -5,16 +5,14 @@ window.onload = function() {
       
       var username = document.getElementById('username').value;
       var password = document.getElementById('password').value;
+
+      const data = new FormData();
+      data.append('username', username);
+      data.append('password', password);
       
       fetch('https://api.lynxgamestore.com/auth/signin', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          username: username,
-          password: password
-        })
+        body: data
       })
       .then(function(response) {
         if (!response.ok) {
@@ -24,9 +22,12 @@ window.onload = function() {
       })
       .then(function(data) {
         // Store the token.
-        localStorage.setItem('token', data.token);
+        // localStorage.setItem('token', data.token);
+
         // Redirect to the home page.
-        window.location.href = 'home.html';
+        window.lynx.save_user_fname(data.first_name).then(val => {
+          window.location.href = 'home.html';
+        })
       })
       .catch(function(error) {
         // Display the error message.
@@ -34,4 +35,3 @@ window.onload = function() {
       });
     });
   };
-  

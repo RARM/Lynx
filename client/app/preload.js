@@ -1,3 +1,5 @@
+const { contextBridge, ipcRenderer } = require('electron')
+
 /**
  * The preload script runs before. It has access to web APIs
  * as well as Electron's renderer process modules and some
@@ -15,3 +17,13 @@ window.addEventListener('DOMContentLoaded', () => {
     replaceText(`${type}-version`, process.versions[type])
   }
 })
+
+// Preload (Isolated World)
+contextBridge.exposeInMainWorld(
+  'lynx',
+  {
+    get_user_fname: () => ipcRenderer.invoke('getfname'),
+    save_user_fname: (username) => ipcRenderer.invoke('savefname', username),
+    test: () => 'It is working!'
+  }
+)
