@@ -62,5 +62,4 @@ def signup(request):
 def signout(request):
     logout(request)
     return JsonResponse({"message": "You have logged in successfully."}, status=201)
-    messages.success(request, "Logged out successfully.")
-    return redirect('signin')
+
