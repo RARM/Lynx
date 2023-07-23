@@ -1,35 +1,24 @@
-from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.shortcuts import render
-from rest_framework import serializers
-from rest_framework.renderers import JSONRenderer
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 from .models import Game
+from .serializers import GameSerializer
 
 # Create your views here.
 @csrf_exempt
+@api_view(['POST'])
 def upload(request):
-
-        if request.method == "POST":
-            newGame = Game(gameName = request.POST['gname'], gameBin = request.POST['gbin'], gameDescription=request.POST['gdescr'])
-            newGame.save()
-            #gameId = request.POST['gid']
-            #gameName = request.POST['gname']
-            #gameBin = request.POST['gbin']
-            
-
-            return JsonResponse({"message": "Your game has been uploaded.",
-                                "gameName": newGame.gameName}, status=201)
+        serializer = GameSerializer(data=request.data)
+        if serializer.is_valid():
+             serializer.save()
+        return Response(serializer.data)
     
-
 @csrf_exempt
+@api_view(['GET'])
 def list(request):
-    if request.method == "GET":
-        games = Game.objects.all()
-        gameList = []
-        for game in games:
-               gameList.append("Name: " + game.gameName + " Description: " + game.gameDescription + " ID: " + str(game.id))
-        return JsonResponse({"message": "Here is the list.",
-                            "gameList": gameList}, status=201)
+    gameList = Game.objects.all()
+    serializer = GameSerializer(gameList, many=True)
+    return Response(serializer.data)
 
 @csrf_exempt   
 def download(request):
