@@ -3,7 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from rest_framework import serializers
 from rest_framework.renderers import JSONRenderer
-from .models import Game, GameSerializer
+from .models import Game
 
 # Create your views here.
 @csrf_exempt
@@ -24,9 +24,12 @@ def upload(request):
 @csrf_exempt
 def list(request):
     if request.method == "GET":
-        gameList = GameSerializer(Game.objects.all())
+        games = Game.objects.all()
+        gameList = []
+        for game in games:
+               gameList.append("Name: " + game.gameName + " Description: " + game.gameDescription + " ID: " + game.id)
         return JsonResponse({"message": "Here is the list.",
-                            "gameList": gameList.data}, status=201)
+                            "gameList": gameList}, status=201)
 
 @csrf_exempt   
 def download(request):
