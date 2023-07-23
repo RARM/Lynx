@@ -18,7 +18,7 @@ def upload(request):
             
 
             return JsonResponse({"message": "Your game has been uploaded.",
-                                "gname": newGame.gname}, status=201)
+                                "gameName": newGame.gameName}, status=201)
     
 
 @csrf_exempt
