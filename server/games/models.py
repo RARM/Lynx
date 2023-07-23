@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from rest_framework import serializers
 
 # Create your models here.
 class Game(models.Model):
@@ -19,3 +20,11 @@ class Game(models.Model):
     def __str__(self):
         """String for representing the MyModelName object (in Admin site etc.)."""
         return self.gameName
+    
+class GameSerializer(serializers.Serializer):
+    gameName = models.CharField(max_length=200)
+    gameDescription = models.CharField(max_length=200)
+
+    class Meta:
+        model = Game
+        fields = ['id', 'gameName', 'gameDescription']
