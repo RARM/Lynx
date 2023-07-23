@@ -1,0 +1,26 @@
+{
+  "name": "lynx-games-test",
+  "version": "1.0.0",
+  "description": "Automated script for uploading three games to the Lynx server. It is only for the unauthenticated version of the Lynx server.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RARM/Lynx.git"
+  },
+  "keywords": [
+    "testing",
+    "automated",
+    "calls"
+  ],
+  "author": "Lynx Development Team",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/RARM/Lynx/issues"
+  },
+  "homepage": "https://github.com/RARM/Lynx#readme"
+}
