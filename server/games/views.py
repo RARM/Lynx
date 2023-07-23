@@ -3,7 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from rest_framework import serializers
 from rest_framework.renderers import JSONRenderer
-from models import Game
+from .models import Game
 
 # Create your views here.
 @csrf_exempt

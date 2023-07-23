@@ -9,7 +9,7 @@ class Game(models.Model):
 
     # Metadata
     class Meta:
-        ordering = ['-gameId']
+        ordering = ['-id']
 
     # Methods
     def get_absolute_url(self):
