@@ -10,7 +10,7 @@ from .serializers import GameSerializer
 def upload(request):
         serializer = GameSerializer(data=request.data)
         if serializer.is_valid():
-             serializer.save()
+            serializer.save()
         return Response(serializer.data)
     
 @csrf_exempt
@@ -20,6 +20,9 @@ def list(request):
     serializer = GameSerializer(gameList, many=True)
     return Response(serializer.data)
 
-@csrf_exempt   
+@csrf_exempt 
+@api_view(['POST'])  
 def download(request):
-    pass
+    game = request.id
+    download = Game.objects.filter(id=game)
+    return Response(download)
