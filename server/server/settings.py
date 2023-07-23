@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'helloworld',
-    'authenticate'
+    'authenticate',
+    'games'
 ]
 
 MIDDLEWARE = [
