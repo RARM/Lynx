@@ -27,7 +27,7 @@ def list(request):
         games = Game.objects.all()
         gameList = []
         for game in games:
-               gameList.append("Name: " + game.gameName + " Description: " + game.gameDescription + " ID: " + game.id)
+               gameList.append("Name: " + game.gameName + " Description: " + game.gameDescription + " ID: " + str(game.id))
         return JsonResponse({"message": "Here is the list.",
                             "gameList": gameList}, status=201)
 
