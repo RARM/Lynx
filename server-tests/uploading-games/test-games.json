@@ -1,0 +1,16 @@
+{
+    "games": [
+        {
+            "title": "Hello world!",
+            "description": "This is a simple demo hello world program by Lynx!"
+        },
+        {
+            "title": "Snake",
+            "description": "An all-time classic for passing time."
+        },
+        {
+            "title": "LEGO Online",
+            "description": "Play legos with all your friends."
+        }
+    ]
+}
