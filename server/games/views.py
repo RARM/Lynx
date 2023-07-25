@@ -9,13 +9,13 @@ from django.contrib.auth.models import User
 @csrf_exempt
 @api_view(['POST'])
 def upload(request):
-        serializer = GameSerializer(data=request.data)
-        user = User.objects.filter(id=request.userId)
-        if serializer.is_valid():
-            if user.is_authenticated:
-                serializer.save()
-                return Response(serializer.data, status=201)
-        return Response(serializer.errors, status=400)
+    serializer = GameSerializer(data=request.data)
+    user = User.objects.filter(id=request.userId)
+    if serializer.is_valid():
+        if user.is_authenticated:
+            serializer.save()
+            return Response(serializer.data, status=201)
+    return Response(serializer.errors, status=400)
     
 @csrf_exempt
 @api_view(['GET'])
