@@ -14,7 +14,8 @@ def upload(request):
         if serializer.is_valid():
             if user.is_authenticated:
                 serializer.save()
-        return Response(serializer.data)
+                return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
     
 @csrf_exempt
 @api_view(['GET'])
