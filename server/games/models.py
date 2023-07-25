@@ -1,8 +1,11 @@
 from django.db import models
 from django.urls import reverse
 
-# Create your models here.
 class Game(models.Model):
+    """Representation of a game in the Lynx server. It follows the DRF Model super class.
+    
+    It is used in the API and for the database schema.
+    """
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     gbin = models.FileField(upload_to="uploads/")
