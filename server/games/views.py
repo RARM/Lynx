@@ -11,7 +11,8 @@ def upload(request):
         serializer = GameSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-        return Response(serializer.data)
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
     
 @csrf_exempt
 @api_view(['GET'])

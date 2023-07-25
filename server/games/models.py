@@ -5,7 +5,7 @@ from django.urls import reverse
 class Game(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    gbin = models.FileField()
+    gbin = models.FileField(upload_to="uploads/")
 
     # Metadata
     class Meta:
