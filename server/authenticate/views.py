@@ -55,8 +55,9 @@ def signup(request):
         myuser = User.objects.create_user(username, email, password)
         myuser.first_name = fname
         myuser.last_name = lname
-        serializer = UserSerializer(myuser)
-        serializer.save()
+        #serializer = UserSerializer(myuser)
+        #serializer.save()
+        myuser.save()
 
         return JsonResponse({"message": "Your account has been created."}, status=201)
     
