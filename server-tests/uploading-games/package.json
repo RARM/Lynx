@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/RARM/Lynx/issues"
   },
-  "homepage": "https://github.com/RARM/Lynx#readme"
+  "homepage": "https://github.com/RARM/Lynx#readme",
+  "dependencies": {
+    "mime-types": "^2.1.35"
+  }
 }

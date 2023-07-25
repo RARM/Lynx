@@ -2,15 +2,21 @@
     "games": [
         {
             "title": "Hello world!",
-            "description": "This is a simple demo hello world program by Lynx!"
+            "description": "This is a simple demo hello world program by Lynx!",
+            "file": "demo-game.setup.exe.zip",
+            "filename": "demo-game.zip"
         },
         {
             "title": "Snake",
-            "description": "An all-time classic for passing time."
+            "description": "An all-time classic for passing time.",
+            "file": "demo-game.setup.exe.zip",
+            "filename": "snake.zip"
         },
         {
             "title": "LEGO Online",
-            "description": "Play legos with all your friends."
+            "description": "Play legos with all your friends.",
+            "file": "demo-game.setup.exe.zip",
+            "filename": "lego.zip"
         }
     ]
 }
