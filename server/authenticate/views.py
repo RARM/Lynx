@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.hashers import make_password
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse, JsonResponse
 from .serializers import UserSerializer
@@ -9,7 +10,7 @@ from .serializers import UserSerializer
 def signin(request):
     if request.method == "POST":
         username = request.POST['username']
-        password = request.POST['password']
+        password = make_password(request.POST['password'])
 
         user = authenticate(username=username, password=password)
 
@@ -31,8 +32,8 @@ def signup(request):
         fname = request.POST['fname']
         lname = request.POST['lname']
         email = request.POST['email']
-        password = request.POST['password']
-        passwordConfirm = request.POST['passwordConfirm']
+        password = make_password(request.POST['password'])
+        passwordConfirm = make_password(request.POST['passwordConfirm'])
 
 
         if User.objects.filter(username=username).exists():
