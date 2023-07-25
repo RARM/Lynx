@@ -3,16 +3,14 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Game
 from .serializers import GameSerializer
-from django.contrib.auth.models import User
 
 # Create your views here.
 @csrf_exempt
 @api_view(['POST'])
 def upload(request):
     serializer = GameSerializer(data=request.data)
-    user = User.objects.filter(id=request.userId)
     if serializer.is_valid():
-        if user.is_authenticated:
+        if request.user.is_authenticated:
             serializer.save()
             return Response(serializer.data, status=201)
     return Response(serializer.errors, status=400)
@@ -34,8 +32,7 @@ def download(request):
 @csrf_exempt 
 @api_view(['POST'])  
 def purchase(request):
-    user = User.objects.filter(id=request.userId)
     game = Game.objects.filter(id=request.gameId)
-    if user.is_authenticated:
-        user.permissions.add(game)
+    if request.user.is_authenticated:
+        request.user.permissions.add(game)
     return Response()
