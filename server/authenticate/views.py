@@ -6,9 +6,7 @@ from django.http import HttpResponse, JsonResponse
 from .serializers import UserSerializer
 
 @csrf_exempt
-# Create your views here.
 def signin(request):
-
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
@@ -64,5 +62,11 @@ def signup(request):
 @csrf_exempt   
 def signout(request):
     logout(request)
-    return JsonResponse({"message": "You have logged in successfully."}, status=201)
+    return JsonResponse({"message": "You have logged out successfully."}, status=201)
 
+@csrf_exempt
+def get_username(request):
+    username = 'Nobody.'
+    if request.user.is_authenticated:
+        username = request.user.first_name
+    return JsonResponse({"name": username}, status=201)
