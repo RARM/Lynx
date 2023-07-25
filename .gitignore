@@ -4,4 +4,3 @@ node_modules/
 server/db.sqlite3
 .DS_Store
 client/out
-server/uploads

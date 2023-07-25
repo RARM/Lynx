@@ -6,6 +6,8 @@ class Game(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     gbin = models.FileField(upload_to="uploads/")
+    creator = models.CharField(max_length=200)
+    userId = models.IntegerField()
 
     # Metadata
     class Meta:
