@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse, JsonResponse
+from .serializers import UserSerializer
 
 @csrf_exempt
 # Create your views here.
@@ -35,6 +36,7 @@ def signup(request):
         password = request.POST['password']
         passwordConfirm = request.POST['passwordConfirm']
 
+
         if User.objects.filter(username=username).exists():
             return JsonResponse({"error": "That username already exists. Please try another one."}, status=400)
 
@@ -53,7 +55,8 @@ def signup(request):
         myuser = User.objects.create_user(username, email, password)
         myuser.first_name = fname
         myuser.last_name = lname
-        myuser.save()
+        serializer = UserSerializer(myuser)
+        serializer.save()
 
         return JsonResponse({"message": "Your account has been created."}, status=201)
     
