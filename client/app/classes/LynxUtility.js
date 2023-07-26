@@ -1,4 +1,11 @@
-class LynxUtility {
+const fs = require('fs');
+const unzipper = require('unzipper');
+
+module.exports = class LynxUtility {
+    static hello() {
+        console.log('Hello world!');
+    }
+
     static getSessionID(headers) {
         let sessionID = '';
         
@@ -10,5 +17,10 @@ class LynxUtility {
         }
 
         return sessionID;
+    }
+
+    static unzipGame(gamepath, localpath) {
+        fs.createReadStream(gamepath)
+        .pipe(unzipper.Extract({ path: localpath }));
     }
 }

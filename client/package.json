@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/RARM/Lynx.git"
   },
-  "author":"Lynx Team",
+  "author": "Lynx Team",
   "license": "UNLICENSED",
   "private": true,
   "bugs": {
@@ -29,6 +29,7 @@
     "electron": "^25.2.0"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "unzipper": "^0.10.14"
   }
 }

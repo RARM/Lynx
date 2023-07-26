@@ -1,5 +1,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
+var LynxUtility = require('./classes/LynxUtility');
+var exec = require('child_process').execFile;
 
 function createWindow () {
   const mainWindow = new BrowserWindow({
@@ -17,7 +19,7 @@ function createWindow () {
 }
 
 app.whenReady().then(() => {
-  createWindow()
+  createWindow();
 
   app.on('activate', function () {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
@@ -45,3 +47,22 @@ ipcMain.handle('savefname', async (event, name) => {
     resolve(true);
   });
 });
+
+ipcMain.handle('unzipGame', async (event, arg) => {
+  return new Promise(function(resolve, reject) {
+    unzipGame();
+    resolve(true);
+  });
+});
+
+function unzipGame() {
+  const localGamesFolder = app.getAppPath() + '/local-games';
+  const sampleGameZip = app.getAppPath() + '/sample-files/demo-game.setup.exe.zip';
+  console
+  LynxUtility.unzipGame(sampleGameZip, localGamesFolder);
+}
+
+function executeDemoGame() {
+  const localGamesFolder = app.getAppPath() + '/local-games/demo-game.setup.exe';
+  exec(localGamesFolder);
+}
