@@ -11,7 +11,7 @@ def signin(request):
     if request.method == "POST":
         username = request.POST['username']
         #password = make_password(request.POST['password'])
-        password = request.POST['password']
+        password = make_password(salt='Lynx', password=request.POST['password'])
 
         user = authenticate(username=username, password=password)
 
@@ -33,8 +33,8 @@ def signup(request):
         fname = request.POST['fname']
         lname = request.POST['lname']
         email = request.POST['email']
-        password = request.POST['password']
-        passwordConfirm = request.POST['passwordConfirm']
+        password = make_password(salt='Lynx', password=request.POST['password'])
+        passwordConfirm = make_password(salt='Lynx', password=request.POST['passwordConfirm'])
 
 
         if User.objects.filter(username=username).exists():
@@ -52,7 +52,6 @@ def signup(request):
         if not username.isalnum():
             return JsonResponse({"error": "Username must be alpha-numeric."}, status=400)
 
-        #password = make_password(password)
         myuser = User.objects.create_user(username, email, password)
         myuser.first_name = fname
         myuser.last_name = lname
