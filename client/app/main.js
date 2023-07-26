@@ -63,11 +63,11 @@ ipcMain.handle('playGame', async (event, arg) => {
 
 function unzipGame() {
   const localGamesFolder = app.getAppPath() + '/local-games';
-  const sampleGameZip = app.getAppPath() + '/sample-files/demo-game.setup.exe.zip';
+  const sampleGameZip = app.getAppPath() + '/sample-files/Truck_Town.zip';
   LynxUtility.unzipGame(sampleGameZip, localGamesFolder);
 }
 
 function executeDemoGame() {
-  const localGamesFolder = app.getAppPath() + '/local-games/demo-game.setup.exe';
+  const localGamesFolder = app.getAppPath() + '/local-games/TruckTown.exe';
   exec(localGamesFolder);
 }
