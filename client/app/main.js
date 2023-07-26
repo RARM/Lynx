@@ -55,10 +55,15 @@ ipcMain.handle('unzipGame', async (event, arg) => {
   });
 });
 
+ipcMain.handle('playGame', async (event, arg) => {
+  return new Promise(function(resolve, reject) {
+    executeDemoGame();
+  });
+});
+
 function unzipGame() {
   const localGamesFolder = app.getAppPath() + '/local-games';
   const sampleGameZip = app.getAppPath() + '/sample-files/demo-game.setup.exe.zip';
-  console
   LynxUtility.unzipGame(sampleGameZip, localGamesFolder);
 }
 
