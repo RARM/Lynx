@@ -39,7 +39,7 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     // Signup was successful.
     debugger;
     message_box.innerHTML = "Signup successful, redirecting to login page...";
-    window.location.href = 'index.html';
+    window.location.href = 'signin.html';
   })
   .catch(error => {
     // Display the error message.

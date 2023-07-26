@@ -21,12 +21,9 @@ window.onload = function() {
         return response.json();
       })
       .then(function(data) {
-        // Store the token.
-        // localStorage.setItem('token', data.token);
-
         // Redirect to the home page.
         window.lynx.save_user_fname(data.first_name).then(val => {
-          window.location.href = 'home.html';
+          window.location.href = '../user-pages/home.html';
         })
       })
       .catch(function(error) {
