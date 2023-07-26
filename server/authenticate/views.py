@@ -20,7 +20,8 @@ def signin(request):
             return JsonResponse({
                 "message": "You have successfully logged in.",
                 "first_name": user.first_name,
-                "last_name": user.last_name
+                "last_name": user.last_name,
+                "email": user.email
             }, status=201)
         else:
             #messages.error(request, "Login not found")
