@@ -1,6 +1,15 @@
-venv/
-__pycache__/
-node_modules/
-server/db.sqlite3
+# Python Environment
+**/venv/
+**/__pycache__/
+**/server/db.sqlite3
+
+# NodeJS
+node_modules
+**/client/out
+
+# Client Temp Files
+**/client/local-games
+!**/client/local-games/example.txt
+
+# MacOS System
 .DS_Store
-client/out
