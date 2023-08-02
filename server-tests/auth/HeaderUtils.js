@@ -1,7 +1,7 @@
 /**
  * Utility class to work with request/response headers.
 **/
-export default class HeaderUtils {
+class HeaderUtils {
     /**
      * Get the `sessionid` cookie from a response header containing a
      * `Set-Cookie` header.
@@ -22,3 +22,5 @@ export default class HeaderUtils {
         return sessionID;
     }
 }
+
+module.exports = HeaderUtils;

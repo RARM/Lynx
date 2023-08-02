@@ -1,4 +1,4 @@
-import HeaderUtils from "./HeaderUtils";
+const HeaderUtils = require('./HeaderUtils');
 
 const urlLynxServer = 'http://127.0.0.1:8000';
 
@@ -23,7 +23,7 @@ const urlLynxServer = 'http://127.0.0.1:8000';
 /**
  * Class for handling user authentication with the Lynx server.
 **/
-export default class LynxClientAuthentication {
+class LynxClientAuthentication {
     constructor() {
         /**
          * The `sessionid` used in the `Cookie` header for future requests.
@@ -112,33 +112,36 @@ export default class LynxClientAuthentication {
      * Asks the server to create an account.
      * 
      * @param {NewAccConfig} config 
-     * @returns {NewAccResponse}
+     * @returns {Promise<NewAccResponse>}
     **/
     static async createAccount(config) {
-        const request = new FormData();
-        request.append('username', config.username);
-        request.append('fname', config.fname);
-        request.append('lname', config.lname);
-        request.append('email', config.email);
-        request.append('password', config.password);
-        request.append('passwordConfirm', config.passwordConfirm);
+        return new Promise(async (resolve) => {
+            const request = new FormData();
+            request.append('username', config.username);
+            request.append('fname', config.fname);
+            request.append('lname', config.lname);
+            request.append('email', config.email);
+            request.append('password', config.password);
+            request.append('passwordConfirm', config.passwordConfirm);
+    
+            const response = await fetch(urlLynxServer + '/auth/signup', {
+                method: 'POST',
+                body: request
+            });
+    
+            let reqResponse = new Object();
+            const respMsg = await response.json();
+            if (response.status == 201) {
+                reqResponse.success = true;
+                reqResponse.message = respMsg.message;
+            } else {
+                reqResponse.success = false;
+                reqResponse.message = respMsg.error;
+            }
 
-        const response = await fetch(urlLynxServer + '/auth/signup', {
-            method: 'POST',
-            body: request
-        });
-
-        let reqResponse = new Object();
-        const respMsg = await response.json();
-        if (response.status == 201) {
-            reqResponse.success = true;
-            reqResponse.message = respMsg.message;
-        } else {
-            reqResponse.success = false;
-            reqResponse.message = respMsg.error;
-        }
-
-        return reqResponse;
+            resolve(reqResponse);
+        })
+        // return reqResponse;
     }
 
     /**
@@ -161,3 +164,5 @@ export default class LynxClientAuthentication {
         return jsonResp.name;
     }
 }
+
+module.exports = LynxClientAuthentication;

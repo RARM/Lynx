@@ -1,9 +1,10 @@
 const LynxAuthAPI = require('./LynxAuthAPI');
 
-async function main() {
+test('Creating an account.', async () => {
+    // Get random user.
     const randUser = await fetch('https://randomuser.me/api/').then(resp => resp.json());
-    console.log('Requested random user. Random user name: ' + randUser.results[0].name.first + ' ' + randUser.results[0].name.last);
 
+    // Test.
     const creatAccResp = await LynxAuthAPI.createAccount({
         username: randUser.results[0].login.username,
         fname: randUser.results[0].name.first,
@@ -13,9 +14,5 @@ async function main() {
         passwordConfirm: randUser.results[0].login.password
     });
 
-    console.log("\nResponse from the server.");
-    console.log('Success: ' + creatAccResp.success);
-    console.log('Message: ' + creatAccResp.message);
-}
-
-main();
+    expect(creatAccResp.success).toBe(true);
+});
