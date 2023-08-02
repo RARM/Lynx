@@ -10,7 +10,6 @@ from .serializers import UserSerializer
 def signin(request):
     if request.method == "POST":
         username = request.POST['username']
-        #password = make_password(request.POST['password'])
         password = make_password(salt='Lynx', password=request.POST['password'])
 
         user = authenticate(username=username, password=password)
@@ -24,7 +23,6 @@ def signin(request):
                 "email": user.email
             }, status=201)
         else:
-            #messages.error(request, "Login not found")
             return JsonResponse({"error": "Login not found"}, status=400)
 
 @csrf_exempt
@@ -56,8 +54,6 @@ def signup(request):
         myuser = User.objects.create_user(username, email, password)
         myuser.first_name = fname
         myuser.last_name = lname
-        #serializer = UserSerializer(myuser)
-        #serializer.save()
         myuser.save()
 
         return JsonResponse({"message": "Your account has been created."}, status=201)
