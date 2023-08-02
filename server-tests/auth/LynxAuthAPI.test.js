@@ -14,5 +14,5 @@ test('Creating an account.', async () => {
         passwordConfirm: randUser.results[0].login.password
     });
 
-    expect(creatAccResp.success).toBe(true);
+    await expect(creatAccResp.success).toBe(true);
 });

@@ -115,33 +115,30 @@ class LynxClientAuthentication {
      * @returns {Promise<NewAccResponse>}
     **/
     static async createAccount(config) {
-        return new Promise(async (resolve) => {
-            const request = new FormData();
-            request.append('username', config.username);
-            request.append('fname', config.fname);
-            request.append('lname', config.lname);
-            request.append('email', config.email);
-            request.append('password', config.password);
-            request.append('passwordConfirm', config.passwordConfirm);
-    
-            const response = await fetch(urlLynxServer + '/auth/signup', {
-                method: 'POST',
-                body: request
-            });
-    
-            let reqResponse = new Object();
-            const respMsg = await response.json();
-            if (response.status == 201) {
-                reqResponse.success = true;
-                reqResponse.message = respMsg.message;
-            } else {
-                reqResponse.success = false;
-                reqResponse.message = respMsg.error;
-            }
+        const request = new FormData();
+        request.append('username', config.username);
+        request.append('fname', config.fname);
+        request.append('lname', config.lname);
+        request.append('email', config.email);
+        request.append('password', config.password);
+        request.append('passwordConfirm', config.passwordConfirm);
 
-            resolve(reqResponse);
-        })
-        // return reqResponse;
+        const response = await fetch(urlLynxServer + '/auth/signup', {
+            method: 'POST',
+            body: request
+        });
+
+        let reqResponse = new Object();
+        const respMsg = await response.json();
+        if (response.status == 201) {
+            reqResponse.success = true;
+            reqResponse.message = respMsg.message;
+        } else {
+            reqResponse.success = false;
+            reqResponse.message = respMsg.error;
+        }
+
+        return reqResponse;
     }
 
     /**
