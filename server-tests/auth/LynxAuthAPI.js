@@ -140,4 +140,24 @@ export default class LynxClientAuthentication {
 
         return reqResponse;
     }
+
+    /**
+     * This function is not officially in supported (neither by the client nor
+     * by the server). It is only for testing whether the server can recognize
+     * a specific `sessionid`.
+     * 
+     * @param {string} sessionid
+     * @returns {string} 
+    **/
+    static async askName(sessionid) {
+        const response = await fetch(urlLynxServer + '/auth/getname', {
+            headers: {
+                'cookie': sessionid
+            }
+        });
+
+        const jsonResp = await response.json();
+
+        return jsonResp.name;
+    }
 }
