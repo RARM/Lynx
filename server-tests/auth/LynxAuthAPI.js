@@ -106,6 +106,12 @@ class LynxClientAuthentication {
                 'cookie': this.sessionid
             }
         });
+
+        this.sessionid = '';
+        this.username = '';
+        this.fname = '';
+        this.lname = '';
+        this.email = '';
     }
 
     /**
@@ -147,7 +153,7 @@ class LynxClientAuthentication {
      * a specific `sessionid`.
      * 
      * @param {string} sessionid
-     * @returns {string} 
+     * @returns {Promise<string>}
     **/
     static async askName(sessionid) {
         const response = await fetch(urlLynxServer + '/auth/getname', {
