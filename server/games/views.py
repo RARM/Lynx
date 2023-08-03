@@ -1,24 +1,32 @@
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, authentication_classes
 from rest_framework.response import Response
 from .models import Game
 from .serializers import GameSerializer
 from django.http import FileResponse
 
-@csrf_exempt
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+
+class CsrfExemptSessionAuthentication(SessionAuthentication):
+    def enforce_csrf(self, request):
+        return  # To not perform the csrf check previously happening
+
+# authentication_classes = (CsrfExemptSessionAuthentication, BasicAuthentication)
+
+def ignore_csrf(view_func):
+    return authentication_classes([CsrfExemptSessionAuthentication])(view_func)
+
+# @csrf_exempt
 @api_view(['POST'])
+@ignore_csrf
 def upload(request):
     """Function handling the games/upload API.
 
     It receives a game creation request, verifies a user is authenticated, and
     upload the game if so.
     """
-    d = request.data
-    uid = request.user.id
-    uname = request.user.username
-    d.creator = uname
-    d.userId = uid
-    serializer = GameSerializer(data=d)
+    request.data.update({'userId': request.user.id})
+    serializer = GameSerializer(data=request.data)
     if serializer.is_valid():
         if request.user.is_authenticated: # Checking if the user is authenticated.
             serializer.save()

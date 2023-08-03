@@ -9,8 +9,7 @@ class Game(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     gbin = models.FileField(upload_to="uploads/")
-    creator = models.CharField(max_length=200)
-    userId = models.IntegerField()
+    userId = models.IntegerField(default=-1)
 
     # Metadata
     class Meta:
@@ -23,4 +22,4 @@ class Game(models.Model):
 
     def __str__(self):
         """String for representing the MyModelName object (in Admin site etc.)."""
-        return self.gameName
+        return self.name
