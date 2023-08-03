@@ -1,0 +1,28 @@
+{
+  "name": "lynx-auth-api-tests",
+  "version": "1.0.0",
+  "description": "Test cases for the Lynx auth APIs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RARM/Lynx.git"
+  },
+  "keywords": [
+    "jest",
+    "tests",
+    "auth",
+    "lynx"
+  ],
+  "author": "Lynx Team",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/RARM/Lynx/issues"
+  },
+  "homepage": "https://github.com/RARM/Lynx#readme",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  }
+}
