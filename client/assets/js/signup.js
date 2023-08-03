@@ -1,6 +1,6 @@
 let message_box = document.getElementById("msg");
 
-document.getElementById('signup-form').addEventListener('submit', function(event) {
+document.getElementById('login-form').addEventListener('submit', function(event) {
   // Prevent the form from being submitted normally.
   event.preventDefault();
 

@@ -3,23 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <title>Lynx</title>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../assets/css/page-specific/login.css">
   </head>
   <body>
     <div id="login-container">
-      <h2>Lynx Login</h2>
+      <img src="../../assets/images/Lynx-Logo.png" alt="Image" id="login-image">
+      <h2>Lynx</h2>
       <form id="login-form">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br>
-        <input type="submit" value="Submit">
+        <div class="input-container">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username">
+        </div>
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password">
+        </div>
+        <div class="button-container"> 
+          <input type="submit" value="Sign In">
+          <p class="signup-text">or sign up <a href="signup.html">here</a>.</p> 
+        </div>
       </form>
-      <p>Sign up <a href="signup.html">here</a>.</p>
-  </div>
+    </div>
 
-  <script src="../../assets/js/renderer.js"></script>
-  <script src="../../assets/js/login.js"></script>
- 
+    <script src="../../assets/js/renderer.js"></script>
+    <script src="../../assets/js/login.js"></script>
+
   </body>
 </html>

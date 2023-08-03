@@ -1,44 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Lynx</title>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../assets/css/page-specific/signup.css">
-</head>
-<body>
-    <h3>Create your account!</h3>
-    <form method="post" id="signup-form">
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Create A Username (use only letters and numbers)" Required>
+  </head>
+  <body>
+    <div id="login-container">
+      <img src="../../assets/images/Lynx-Logo.png" alt="Image" id="login-image">
+      <h2>Lynx Signup</h2>
+      <form id="login-form">
+        <div class="big-input-container">
+        <div class="input-container">
+          <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Create Username (use only letters and numbers)" Required>
         </div>
-        <div class="form-group">
-            <label for="fname">First Name</label>
+        <div class="input-container">
+          <label for="fname">First Name</label>
             <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name" Required>
         </div>
-        <div class="form-group">
-            <label for="lname">Last Name</label>
+        <div class="input-container">
+          <label for="lname">Last Name</label>
             <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name" Required>
         </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email Address" Required>
+        <div class="input-container">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email Address" Required>
         </div>
-        <div class="form-group">
-            <label for="pass1">Password</label>
-            <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Create Your Password" Required>
+        <div class="input-container">
+          <label for="pass1">Password</label>
+          <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Create Your Password" Required>
         </div>
-        <div class="form-group">
-            <label for="pass2">Confirm Password</label>
-            <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Confirm Your Password" Required>
+        <div class="input-container">
+          <label for="pass2">Confirm Password</label>
+          <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Confirm Your Password" Required>
         </div>
-        <button type="submit" class="btn btn-primary">Sign Up</button>
-        <p>Log in <a href="signin.html">here</a>.</p>
-    </form>
-    <p id="msg"></p>
-    <script src="../../assets/js/signup.js"></script>
+        </div>
+        <div class="button-container"> 
+          <input type="submit" value="Create Account">
+          <p class="signup-text">or log in <a href="signin.html">here</a>.</p> 
+        </div>
+      </form>
+      <p id="msg"></p>
+    </div>
+
     <script src="../../assets/js/renderer.js"></script>
-</body>
+    <script src="../../assets/js/signup.js"></script>
+
+  </body>
 </html>
