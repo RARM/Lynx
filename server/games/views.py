@@ -1,22 +1,19 @@
 from django.views.decorators.csrf import csrf_exempt
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.decorators import api_view, authentication_classes
 from rest_framework.response import Response
 from .models import Game
 from .serializers import GameSerializer
 from django.http import FileResponse
 
-from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 
 class CsrfExemptSessionAuthentication(SessionAuthentication):
     def enforce_csrf(self, request):
-        return  # To not perform the csrf check previously happening
-
-# authentication_classes = (CsrfExemptSessionAuthentication, BasicAuthentication)
+        return
 
 def ignore_csrf(view_func):
     return authentication_classes([CsrfExemptSessionAuthentication])(view_func)
 
-# @csrf_exempt
 @api_view(['POST'])
 @ignore_csrf
 def upload(request):
