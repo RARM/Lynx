@@ -23,7 +23,7 @@ window.onload = function() {
       .then(function(data) {
         // Redirect to the home page.
         window.lynx.save_user_fname(data.first_name).then(val => {
-          window.location.href = '../user-pages/home.html';
+          window.location.href = '../user-pages/discover.html';
         })
       })
       .catch(function(error) {

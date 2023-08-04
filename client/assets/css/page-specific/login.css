@@ -37,7 +37,7 @@ body {
     text-align: center;
     background: linear-gradient(to bottom, #8432D5, #b382f1);
     -webkit-background-clip: text;
-    background-clip: text; /* Add the standard property */
+    background-clip: text; 
     -webkit-text-fill-color: transparent;
     font-family: 'Russo One', sans-serif;
     font-size: 56px;
