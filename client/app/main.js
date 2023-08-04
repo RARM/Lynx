@@ -7,12 +7,26 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 1000,
     height: 692,
+    resizable: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
-  })
+  });
+
 
   mainWindow.loadFile('app/start-pages/signin.html')
+
+  mainWindow.webContents.on('did-finish-load', () => {
+    const url = mainWindow.webContents.getURL();
+
+    if (url.endsWith('signin.html') || url.endsWith('signup.html')) {
+      mainWindow.setSize(1000, 692); 
+    } else if (url.endsWith('discover.html') || url.endsWith('library.html') ||
+               url.endsWith('purchasepage.html') || url.endsWith('launchpage.html') ||
+               url.endsWith('create.html')) {
+      mainWindow.setSize(1440, 892); 
+    }
+  });
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

@@ -1,22 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="english">
   <head>
-    <meta charset="UTF-8">
-    <title>Welcome to Lynx!</title>
-    <link rel="stylesheet" type="text/css" href="../../assets/css/create.css">
+    <title>exported project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+        .selected-text {
+          color: #D9BCFF;
+        }
+    </style>
+    <style>
+    #uploadForm {
+      position: absolute;
+      top: 200px;
+      left: 272px;
+      color: white;
+    }
+    #uploadForm input[type="submit"] {
+      background-color: purple; 
+      color: white; 
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    #uploadForm input[type="submit"]:hover {
+      background-color: darkviolet; 
+    }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="../../assets/css/page-style.css" />
   </head>
   <body>
-    <h1>Welcome to Lynx, <span id="user-fname">Person</span>!</h1>
-    <div id="nav-bar">
-      <a href="library.html">Library</a>
-      <a href="create.html">Create</a>
-      <a href="community.html">Community</a>
-      <a href="profile.html">Profile</a>
-      <a href="settings.html">Settings</a>
-    </div>
-    
-    
+    <div>
+      <link href="../../assets/css/pages.css" rel="stylesheet" />
 
-    <script src="home.js"></script>
+      <div class="basic-layout-container">
+        <div class="basic-layout-basic-layout">
+          <img
+            src="../../assets/images/pages/rectangle31989-2rw-1500w.png"
+            alt="Rectangle31989"
+            class="basic-layout-rectangle3"
+          />
+          </div>
+          <div class="basic-layout-container8">
+            <a href="launchpage.html">
+              <img
+                src="../../assets/images/GameThumbnails/trucktown.png"
+                alt="Rectangle691981"
+                class="basic-layout-rectangle5001"
+              />
+            </a>            
+            <img
+              src="../../assets/images/pages/rectangle691981-8rx-300h.png"
+              alt="Rectangle691981"
+              class="basic-layout-rectangle5002"
+            />
+            <img
+              src="../../assets/images/pages/rectangle691981-8rx-300h.png"
+              alt="Rectangle691981"
+              class="basic-layout-rectangle5003"
+            />
+            <img
+              src="../../assets/images/pages/rectangle691981-8rx-300h.png"
+              alt="Rectangle691981"
+              class="basic-layout-rectangle5004"
+            />
+            <img
+              src="../../assets/images/pages/rectangle691981-8rx-300h.png"
+              alt="Rectangle691981"
+              class="basic-layout-rectangle5005"
+            />
+            <img
+              src="../../assets/images/pages/rectangle691981-8rx-300h.png"
+              alt="Rectangle691981"
+              class="basic-layout-rectangle5006"
+            />
+          </div>
+          
+          <img
+            src="../../assets/images/pages/rectangle711981-jf-300w.png"
+            alt="Rectangle711981"
+            class="basic-layout-rectangle71"
+          />
+          </a>
+          </div>
+          <img
+            src="../../assets/images/pages/rectangle11989-bbvr-200h.png"
+            alt="Rectangle11989"
+            class="basic-layout-rectangle1"
+          />
+          <span class="basic-layout-text14"><span>Created Games</span></span>
+          <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+            <label for="fileUpload">Choose a game to upload:</label>
+            <input type="file" id="fileUpload" name="file">
+            <input type="submit" value="Upload">
+          </form>
+          <div class="basic-layout-frame1">
+            <a href="discover.html"><span class="basic-layout-text28"><span>Discover</span></span></a>
+            <a href="library.html"><span class="basic-layout-text30"><span>Library</span></span></a>
+            <a href="community.html"><span class="basic-layout-text30"><span>Community</span></span></a>
+            <a href="profile.html"><span class="basic-layout-text30"><span>Profile</span></span></a>
+            <a href="create.html"><span class="basic-layout-text26"><span>CREATE</span></span></a>
+          </div>
+          <img
+            src="../../assets/images/pages/lynxlogowebui11981-l47-200h.png"
+            alt="LynxLogoWEBUI11981"
+            class="basic-layout-lynx-logo-webui1"
+          />
+          <div class="basic-layout-frame2">
+            <span class="basic-layout-text36"><span>Creations</span></span>
+            <span class="basic-layout-text38"><span>Truck Town</span></span>
+            <span class="basic-layout-text40"><span>Game 2</span></span>
+            <span class="basic-layout-text42"><span>Game 3</span></span>
+            <span class="basic-layout-text44"><span>Game 4</span></span>
+            <span class="basic-layout-text46"><span>Game 5</span></span>
+            <span class="basic-layout-text48"><span>Game 6</span></span>
+            <span class="basic-layout-text50"><span>Game 7</span></span>
+          </div>
+          <span class="basic-layout-text52"><span>Settings</span></span>
+          <span class="basic-layout-text54"><span>$ 0.00</span></span>
+          <img
+            src="../../assets/images/pages/arrow11981-i74.svg"
+            alt="Arrow11981"
+            class="basic-layout-arrow1"
+          />
+          <img
+            src="../../assets/images/pages/arrow21981-mywv.svg"
+            alt="Arrow21981"
+            class="basic-layout-arrow2"
+          />
+          <img
+            src="../../assets/images/pages/rectangle21981-71d4-200h.png"
+            alt="Rectangle21981"
+            class="basic-layout-rectangle2"
+          />
+          <img
+            src="../../assets/images/pages/rectangle701981-bn0r-200h.png"
+            alt="Rectangle701981"
+            class="basic-layout-rectangle70"
+          />
+          <img
+            src="../../assets/images/pages/ellipse51981-gl1m-200h.png"
+            alt="Ellipse51981"
+            class="basic-layout-ellipse5"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="../../assets/js/home.js"></script>
   </body>
+  
 </html>

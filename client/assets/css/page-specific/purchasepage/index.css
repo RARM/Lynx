@@ -1,0 +1,937 @@
+.discover-product-page-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.discover-product-page-discover-product-page {
+  width: 100%;
+  height: 2000px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+.discover-product-page-rectangle3 {
+  top: 102px;
+  left: 0px;
+  width: 1440px;
+  height: 1800px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 4px;
+}
+.discover-product-page-rectangle70 {
+  top: 98px;
+  left: 0px;
+  width: 1440px;
+  height: 5px;
+  position: absolute;
+}
+.discover-product-page-rectangle71 {
+  top: 103px;
+  left: 0px;
+  width: 247px;
+  height: 1799px;
+  position: absolute;
+}
+.discover-product-page-rectangle72 {
+  top: 225px;
+  left: 282px;
+  width: 1120px;
+  height: 32px;
+  position: absolute;
+}
+.discover-product-page-rectangle69 {
+  top: 225px;
+  left: 1221px;
+  width: 160px;
+  height: 32px;
+  position: absolute;
+}
+.discover-product-page-rectangle691 {
+  top: 408px;
+  left: 281px;
+  width: 1124px;
+  height: 355px;
+  position: absolute;
+}
+.discover-product-page-rectangle692 {
+  top: 1378px;
+  left: 289px;
+  width: 189px;
+  height: 89px;
+  position: absolute;
+}
+.discover-product-page-rectangle693 {
+  top: 1378px;
+  left: 502px;
+  width: 189px;
+  height: 89px;
+  position: absolute;
+}
+.discover-product-page-rectangle694 {
+  top: 1378px;
+  left: 715px;
+  width: 189px;
+  height: 89px;
+  position: absolute;
+}
+.discover-product-page-rectangle695 {
+  top: 1378px;
+  left: 927px;
+  width: 189px;
+  height: 89px;
+  position: absolute;
+}
+.discover-product-page-rectangle696 {
+  top: 1378px;
+  right: 115px;
+  width: 189px;
+  height: 89px;
+  position: absolute;
+}
+.discover-product-page-rectangle1 {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 98px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 2px;
+}
+.discover-product-page-ellipse5 {
+  top: 29px;
+  left: 1078px;
+  width: 44px;
+  height: 42px;
+  position: absolute;
+}
+.discover-product-page-text {
+  top: 1334px;
+  left: 285px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text02 {
+  top: 1487px;
+  left: 285px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text04 {
+  top: 145px;
+  left: 272px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text06 {
+  top: 300px;
+  left: 277px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Rammetto One;
+  font-weight: 400;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-frame3 {
+  top: 229px;
+  left: 323px;
+  width: 521px;
+  height: 25px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.discover-product-page-text08 {
+  top: 1px;
+  left: 5px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text10 {
+  top: 1px;
+  left: 93px;
+  color: rgba(157, 243, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text12 {
+  top: 1px;
+  left: 219px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text14 {
+  left: 335px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text16 {
+  left: 470px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-frame1 {
+  gap: 25px;
+  top: 26px;
+  left: 160px;
+  width: 753px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+}
+.discover-product-page-text18 {
+  color: rgba(217, 187, 255, 1);
+  height: auto;
+  font-size: 30px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text20 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 30px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text22 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 30px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text24 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 30px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text26 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  font-size: 30px;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 800;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-lynx-logo-webui1 {
+  top: 10px;
+  left: 0px;
+  width: 143px;
+  height: 78px;
+  position: absolute;
+}
+.discover-product-page-frame2 {
+  top: 145px;
+  left: 24px;
+  width: 187px;
+  height: 438px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.discover-product-page-text28 {
+  color: rgba(217, 187, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text30 {
+  top: 85px;
+  left: 27px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text32 {
+  top: 134px;
+  left: 27px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text34 {
+  top: 183px;
+  left: 27px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text36 {
+  top: 232px;
+  left: 27px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text38 {
+  top: 281px;
+  left: 27px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text40 {
+  top: 330px;
+  left: 27px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text42 {
+  top: 379px;
+  left: 27px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text44 {
+  top: 26px;
+  left: 1140px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text46 {
+  top: 37px;
+  left: 995px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 400;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-rectangle40 {
+  top: 1550px;
+  left: 290px;
+  width: 1115px;
+  height: 144px;
+  position: absolute;
+}
+.discover-product-page-rectangle41 {
+  top: 1550px;
+  left: 290px;
+  width: 149px;
+  height: 144px;
+  position: absolute;
+}
+.discover-product-page-text48 {
+  top: 1558px;
+  left: 455px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text50 {
+  top: 1558px;
+  left: 327px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text52 {
+  top: 1590px;
+  left: 455px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-star1 {
+  top: 1558px;
+  left: 582px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+.discover-product-page-star2 {
+  top: 1558px;
+  left: 617px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+.discover-product-page-star3 {
+  top: 1558px;
+  left: 652px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+.discover-product-page-star4 {
+  top: 1558px;
+  left: 687px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+.discover-product-page-star5 {
+  top: 1558px;
+  left: 722px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+.discover-product-page-rectangle42 {
+  top: 1562px;
+  left: 298px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+.discover-product-page-rectangle43 {
+  top: 1717px;
+  left: 290px;
+  width: 1115px;
+  height: 144px;
+  position: absolute;
+}
+.discover-product-page-rectangle44 {
+  top: 1717px;
+  left: 290px;
+  width: 149px;
+  height: 144px;
+  position: absolute;
+}
+.discover-product-page-text54 {
+  top: 1725px;
+  left: 455px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text56 {
+  top: 1725px;
+  left: 327px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text58 {
+  top: 1757px;
+  left: 455px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-star6 {
+  top: 1725px;
+  left: 582px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+.discover-product-page-star7 {
+  top: 1725px;
+  left: 617px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+.discover-product-page-star8 {
+  top: 1725px;
+  left: 652px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+.discover-product-page-star9 {
+  top: 1725px;
+  left: 687px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+.discover-product-page-star10 {
+  top: 1725px;
+  left: 722px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+.discover-product-page-rectangle45 {
+  top: 1729px;
+  left: 298px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+.discover-product-page-rectangle46 {
+  top: 898px;
+  left: 285px;
+  width: 671px;
+  height: 137px;
+  position: absolute;
+}
+.discover-product-page-rectangle49 {
+  top: 1069px;
+  left: 285px;
+  width: 1112px;
+  height: 247px;
+  position: absolute;
+}
+.discover-product-page-rectangle48 {
+  top: 898px;
+  left: 1037px;
+  width: 365px;
+  height: 137px;
+  position: absolute;
+}
+.discover-product-page-text60 {
+  top: 913px;
+  left: 1236px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text62 {
+  top: 1164px;
+  left: 336px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text64 {
+  top: 941px;
+  left: 1320px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text66 {
+  top: 969px;
+  left: 1274px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text68 {
+  top: 997px;
+  left: 1349px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Mono;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-rectangle47 {
+  top: 929px;
+  left: 676px;
+  width: 259px;
+  height: 76px;
+  position: absolute;
+}
+.discover-product-page-text70 {
+  top: 944px;
+  left: 834px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 800;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text72 {
+  top: 935px;
+  left: 312px;
+  color: rgb(255, 255, 255);
+  width: 301px;
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Flex;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text73 {
+  top: 803px;
+  left: 282px;
+  color: rgba(255, 255, 255, 1);
+  width: 301px;
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Flex;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text75 {
+  top: 1088px;
+  left: 336px;
+  color: rgba(255, 255, 255, 1);
+  width: 301px;
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Flex;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-text77 {
+  top: 809px;
+  left: 1185px;
+  color: rgba(255, 255, 255, 1);
+  width: 301px;
+  height: auto;
+  position: absolute;
+  font-size: 40px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Roboto Flex;
+  font-weight: 700;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.discover-product-page-rectangle2 {
+  top: 1902px;
+  left: 0px;
+  width: 1440px;
+  height: 98px;
+  position: absolute;
+}
+.discover-product-page-rectangle73 {
+  top: 1897px;
+  left: 2px;
+  width: 1440px;
+  height: 5px;
+  position: absolute;
+}
+.discover-product-page-rectangle74 {
+  top: 944px;
+  left: 687px;
+  width: 137px;
+  height: 45px;
+  position: absolute;
+}
+#game-download-button {
+  display: inline-block;
+  width: 137px;
+  height: 45px;
+  position: absolute;
+  background-color: purple;
+  color: white;
+  text-align: center;
+  line-height: 45px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#game-download-button:hover {
+  background-color: darkviolet;
+}
+
+progress {
+  position: absolute;
+  top: 990px; 
+  left: 690px;
+  width: 137px;
+  height: 20px;
+}
+.discover-product-page-text79 {
+  top: 943px;
+  left: 692px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 30px;
+  font-style: ExtraBold;
+  text-align: left;
+  font-family: Roboto;
+  font-weight: 800;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}

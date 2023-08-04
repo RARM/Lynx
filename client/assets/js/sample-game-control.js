@@ -5,7 +5,7 @@ downButton.addEventListener('click', () => {
     if (!downloaded) {
         window.lynx.unzip_game()
         .then(done => {
-            downButton.innerHTML = "Play";
+            downButton.innerHTML = "Launch";
             downloaded = true;
         });
     } else {
