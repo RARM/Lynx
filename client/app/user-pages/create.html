@@ -13,24 +13,28 @@
         }
     </style>
     <style>
-    #uploadForm {
-      position: absolute;
-      top: 200px;
-      left: 272px;
-      color: white;
-    }
-    #uploadForm input[type="submit"] {
-      background-color: purple; 
-      color: white; 
-      border: none;
-      cursor: pointer;
-      padding: 10px 20px;
-      text-align: center;
-    }
-
-    #uploadForm input[type="submit"]:hover {
-      background-color: darkviolet; 
-    }
+        #uploadForm {
+        position: absolute;
+        top: 200px;
+        left: 272px;
+        color: white;
+      }
+      #uploadForm input[type="submit"] {
+        background-color: purple; 
+        color: white; 
+        border: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        text-align: center;
+        margin-top: 10px;
+      }
+      #uploadForm label, #uploadForm input {
+        display: block;
+        margin-bottom: 10px;
+      }
+      #uploadForm input[type="submit"]:hover {
+        background-color: darkviolet; 
+      }
     </style>
     <style data-tag="default-style-sheet">
       html {
@@ -126,12 +130,26 @@
             alt="Rectangle11989"
             class="basic-layout-rectangle1"
           />
-          <span class="basic-layout-text14"><span>Created Games</span></span>
+          <span class="basic-layout-text14"><span>Create Game</span></span>
           <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
-            <label for="fileUpload">Choose a game to upload:</label>
-            <input type="file" id="fileUpload" name="file">
+            <label for="gameName">Game Name:</label>
+            <input type="text" id="gameName" name="gameName">
+          
+            <label for="gameDescription">Game Description:</label>
+            <input type="text" id="gameDescription" name="gameDescription">
+          
+            <label for="exePath">Path to Executable:</label>
+            <input type="text" id="exePath" name="exePath">
+          
+            <label for="gbinUpload">Upload GBIN:</label>
+            <input type="file" id="gbinUpload" name="gbin">
+          
+            <label for="thumbnailUpload">Upload Thumbnail:</label>
+            <input type="file" id="thumbnailUpload" name="thumbnail">
+          
             <input type="submit" value="Upload">
           </form>
+          
           <div class="basic-layout-frame1">
             <a href="discover.html"><span class="basic-layout-text28"><span>Discover</span></span></a>
             <a href="library.html"><span class="basic-layout-text30"><span>Library</span></span></a>
