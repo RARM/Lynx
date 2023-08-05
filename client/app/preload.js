@@ -1,12 +1,15 @@
-const { contextBridge, ipcRenderer } = require('electron')
+const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld(
   'lynx',
   {
-    get_user_fname: () => ipcRenderer.invoke('getfname'),
+    // Authentication.
+    createAccount: (newAccConf) => ipcRenderer.invoke('createAccount', newAccConf),
+    signin: (username, password) => ipcRenderer.invoke('signin', username, password),
+    getAccountInfo: () => ipcRenderer.invoke('getAccountInfo'),
+
+    // Games API.
     unzip_game: () => ipcRenderer.invoke('unzipGame'),
-    play_game: () => ipcRenderer.invoke('playGame'),
-    save_user_fname: (username) => ipcRenderer.invoke('savefname', username),
-    test: () => 'It is working!'
+    play_game: () => ipcRenderer.invoke('playGame')
   }
 )
