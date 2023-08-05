@@ -23,8 +23,9 @@ def upload(request):
     It receives a game creation request, verifies a user is authenticated, and
     upload the game if so.
     """
-    request.data.update({'userId': request.user.id})
-    serializer = GameSerializer(data=request.data)
+    data = request.data.copy()
+    data.update({'userId': request.user.id})
+    serializer = GameSerializer(data=data)
     if serializer.is_valid():
         if request.user.is_authenticated: # Checking if the user is authenticated.
             serializer.save()
