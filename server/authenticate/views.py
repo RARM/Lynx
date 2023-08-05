@@ -42,7 +42,7 @@ def signup(request):
         if User.objects.filter(email=email).exists():
             return JsonResponse({"error": "That email is already in use. Please try another one."}, status=400)
 
-        if len(username) > 15:
+        if len(username) > 150:
             return JsonResponse({"error": "Username is too long."}, status=400)
 
         if password != passwordConfirm:
