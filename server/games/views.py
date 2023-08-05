@@ -29,7 +29,7 @@ def upload(request):
             serializer.save()
             return Response(serializer.data, status=201)
     return Response(serializer.errors, status=400)
-    
+
 @csrf_exempt
 @api_view(['GET'])
 def list(request):
@@ -42,21 +42,20 @@ def list(request):
     serializer = GameSerializer(gameList, many=True)
     return Response(serializer.data, status=201)
 
-@csrf_exempt 
-@api_view(['POST'])  
+@csrf_exempt
+@api_view(['GET'])
 def download(request):
     """Handler for the games/download endpoint."""
-    game = request.id
-    download = Game.objects.filter(id=game)
-    # send file
+    game = request.query_params.get('id')
+    download = Game.objects.get(id=game)
     file_handle = download.gbin.open()
     response = FileResponse(file_handle, content_type='File')
     response['Content-Length'] = download.gbin.size
     response['Content-Disposition'] = 'attachment; filename="%s"' % download.gbin.name
     return response
 
-@csrf_exempt 
-@api_view(['POST'])  
+@csrf_exempt
+@api_view(['POST'])
 def purchase(request):
     """Handling the games/purchase endpoint.
 
