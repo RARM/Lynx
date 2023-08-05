@@ -140,3 +140,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
 #     ]
 # }
+
+# Increase server upload file size
+# https://docs.djangoproject.com/en/4.2/ref/settings/#data-upload-max-memory-size
+DATA_UPLOAD_MAX_MEMORY_SIZE = None # 100 MB
+FILE_UPLOAD_MAX_MEMORY_SIZE =  95_000_000 
