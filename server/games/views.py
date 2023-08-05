@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from .models import Game
 from .serializers import GameSerializer
 from django.http import FileResponse
+from django.contrib.auth.models import Permission
 
 
 class CsrfExemptSessionAuthentication(SessionAuthentication):
@@ -65,3 +66,11 @@ def purchase(request):
     if request.user.is_authenticated:
         request.user.permissions.add(game)
     return Response(game.data, status=201)
+
+@csrf_exempt
+@api_view(['GET'])
+def user_games(request):
+    user = request.user
+    permissions = Permission.objects.filter(user=user)
+    serializer = GameSerializer(permissions, many=True)
+    return Response(serializer.data, status=201)
