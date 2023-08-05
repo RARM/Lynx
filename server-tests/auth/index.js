@@ -3,6 +3,7 @@ const LynxAuthAPI = require('./LynxAuthAPI');
 async function main() {
     const randUser = await fetch('https://randomuser.me/api/').then(resp => resp.json());
     console.log('Requested random user. Random user name: ' + randUser.results[0].name.first + ' ' + randUser.results[0].name.last);
+    console.log(('Username: ' + randUser.results[0].login.username));
 
     const creatAccResp = await LynxAuthAPI.createAccount({
         username: randUser.results[0].login.username,
