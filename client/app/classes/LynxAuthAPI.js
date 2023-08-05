@@ -1,6 +1,6 @@
 const HeaderUtils = require('./HeaderUtils');
 
-const urlLynxServer = 'http://127.0.0.1:8000';
+const urlLynxServer = 'http://127.0.0.1:8000'; // FIXME: Change to Lynx server for release.
 
 /**
  * Configuration object for creating an account.
@@ -24,6 +24,8 @@ const urlLynxServer = 'http://127.0.0.1:8000';
  * Class for handling user authentication with the Lynx server.
 **/
 class LynxClientAuthentication {
+    static serverURL = urlLynxServer;
+    
     constructor() {
         /**
          * The `sessionid` used in the `Cookie` header for future requests.
