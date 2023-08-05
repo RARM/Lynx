@@ -8,6 +8,7 @@ urlpatterns = [
     path("download", views.download, name="download"),
     path("purchase", views.purchase, name="purchase"),
     path("user_games", views.user_games, name="user_games"),
+    path("info", views.info, name="info"),
 
 
     # https://api.lynxgamestore.com/hello/world

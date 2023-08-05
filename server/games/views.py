@@ -55,8 +55,8 @@ def download(request):
     response['Content-Disposition'] = 'attachment; filename="%s"' % download.gbin.name
     return response
 
-@csrf_exempt
 @api_view(['POST'])
+@ignore_csrf
 def purchase(request):
     """Handling the games/purchase endpoint.
 
@@ -72,5 +72,15 @@ def purchase(request):
 def user_games(request):
     user = request.user
     permissions = Permission.objects.filter(user=user)
+    #if permissions:
     serializer = GameSerializer(permissions, many=True)
+    return Response(serializer.data, status=201)
+
+@csrf_exempt
+@api_view(['GET'])
+def info(request):
+    """Handler for the games."""
+    game = request.query_params.get('id')
+    gameInfo = Game.objects.get(id=game)
+    serializer = GameSerializer(gameInfo)
     return Response(serializer.data, status=201)
