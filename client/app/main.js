@@ -1,7 +1,10 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
-var LynxUtility = require('./classes/LynxUtility');
 var exec = require('child_process').execFile;
+
+const LynxUtility = require('./classes/LynxUtility');
+const LynxAuthAPI = require('./classes/LynxAuthAPI');
+let liveProgramData = {}
 
 function createWindow () {
   const mainWindow = new BrowserWindow({
@@ -12,7 +15,6 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   });
-
 
   mainWindow.loadFile('app/start-pages/signin.html')
 
@@ -33,6 +35,8 @@ function createWindow () {
 }
 
 app.whenReady().then(() => {
+  liveProgramData.lynxAuth = new LynxAuthAPI();
+  
   createWindow();
 
   app.on('activate', function () {
@@ -44,24 +48,25 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 })
 
-let liveProgramData = {
-  user: new Object(),
-  sessionID: ''
-}
-
-ipcMain.handle('getfname', async (event, arg) => {
-  return new  Promise(function(resolve, reject) {
-    resolve(liveProgramData.user.fname);
-  });
+// Exposed functions for authentication.
+ipcMain.handle('createAccount', async (_event, newAccConf) => {
+  return LynxAuthAPI.createAccount(newAccConf);
 });
 
-ipcMain.handle('savefname', async (event, name) => {
-  return new  Promise(function(resolve, reject) {
-    liveProgramData.user.fname = name;
-    resolve(true);
-  });
+ipcMain.handle('signin', async (_event, username, password) => {
+  return liveProgramData.lynxAuth.signin(username, password);
 });
 
+ipcMain.handle('getAccountInfo', async (_event) => {
+  return new Promise(resolve => resolve({
+    username: liveProgramData.lynxAuth.username,
+    fname: liveProgramData.lynxAuth.fname,
+    lname: liveProgramData.lynxAuth.lname,
+    email: liveProgramData.lynxAuth.email
+  }));
+});
+
+// Exposed functions for game management.
 ipcMain.handle('unzipGame', async (event, arg) => {
   return new Promise(function(resolve, reject) {
     unzipGame();
