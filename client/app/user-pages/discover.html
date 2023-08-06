@@ -185,7 +185,7 @@
             />
           </div>
           <div class="basic-layout-container5">
-            <a href="purchasepage.html">
+            <a href="#" data-gameid="na" onclick="loadPurchaseGame(this)">
               <img
                 src="../../assets/images/GameThumbnails/trucktown.png"
                 alt="Rectangle691981"
@@ -386,12 +386,33 @@
         const row = document.getElementById('new-releases');
         let placeHolders = row.children;
 
-        for (let i = games.length - 1, j = 0; i >= 0 && j < placeHolders.length; i--, j++) {
-          placeHolders[j].src = serverURL + '/games/thumbnail?id=' + games[i].id;
+        for (let i = 0, j = 0; i < games.length && j < placeHolders.length; i++, j++) {
+          // debugger;
+          let container = document.createElement('a');
+          container.href = "#";
+          container.setAttribute('data-gameid', games[i].id);
+          container.setAttribute('onclick', 'loadPurchaseGame(this)');
+          
+          let placeHolder = placeHolders[j];
+          placeHolder.remove();
+          placeHolder.src = serverURL + '/games/thumbnail?id=' + games[i].id;
+          
+          container.append(placeHolder);
+          row.prepend(container);
         }
       }
 
       loadNewReleases();
+
+      function loadPurchaseGame(elem) {
+        const gameid = Number(elem.dataset.gameid);
+        let idVal = (Number.isNaN(gameid)) ? null : gameid;
+        
+        window.lynx.setPurchaseGame(idVal)
+        .then(() => {
+          window.location.href = "purchasepage.html";
+        });
+      }
     </script>
   </body>
   

@@ -38,6 +38,7 @@ function createWindow () {
 app.whenReady().then(() => {
   liveProgramData.lynxAuth = new LynxAuthAPI();
   liveProgramData.lynxGames;
+  liveProgramData.purchaseGameID = null;
   
   createWindow();
 
@@ -74,6 +75,15 @@ ipcMain.handle('getAccountInfo', async (_event) => {
 });
 
 // Exposed functions for game management.
+ipcMain.handle('setPurchaseGame', async (_event, gameid) => {
+  liveProgramData.purchaseGameID = gameid;
+  return;
+});
+
+ipcMain.handle('getPurchaseGame', async (_event) => {
+  return liveProgramData.purchaseGameID;
+});
+
 ipcMain.handle('getGames', async (_event) => {
   return LynxGamesAPI.getAllGames();
 });

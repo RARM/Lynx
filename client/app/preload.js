@@ -13,6 +13,8 @@ contextBridge.exposeInMainWorld(
 
     // Games API.
     getGames: () => ipcRenderer.invoke('getGames'),
+    setPurchaseGame: (gameid) => ipcRenderer.invoke('setPurchaseGame', gameid),
+    getPurchaseGame: () => ipcRenderer.invoke('getPurchaseGame'),
     unzip_game: () => ipcRenderer.invoke('unzipGame'),
     play_game: () => ipcRenderer.invoke('playGame')
   }
