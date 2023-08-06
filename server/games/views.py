@@ -51,9 +51,21 @@ def download(request):
     game = request.query_params.get('id')
     download = Game.objects.get(id=game)
     file_handle = download.gbin.open()
-    response = FileResponse(file_handle, content_type='File')
+    response = FileResponse(file_handle)
     response['Content-Length'] = download.gbin.size
     response['Content-Disposition'] = 'attachment; filename="%s"' % download.gbin.name
+    return response
+
+@csrf_exempt
+@api_view(['GET'])
+def thumbnail(request):
+    """Handler for the games thumbnails."""
+    game = request.query_params.get('id')
+    download = Game.objects.get(id=game)
+    file_handle = download.thumbnail.open()
+    response = FileResponse(file_handle)
+    response['Content-Length'] = download.thumbnail.size
+    response['Content-Disposition'] = 'attachment; filename="%s"' % download.thumbnail.name
     return response
 
 @api_view(['POST'])
