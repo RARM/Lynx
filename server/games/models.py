@@ -8,8 +8,8 @@ class Game(models.Model):
     """
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    gbin = models.FileField(upload_to="games/")
-    thumbnail = models.FileField(upload_to="games-thumbnails/")
+    gbin = models.FileField(upload_to="upload-games/")
+    thumbnail = models.FileField(upload_to="upload-games-thumbnails/")
     exepath = models.CharField(max_length=200)
     userId = models.IntegerField(default=-1)
 

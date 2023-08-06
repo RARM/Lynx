@@ -3,7 +3,7 @@
 **/__pycache__/
 **/server/db.sqlite3
 **/migrations/
-**/server/uploads
+**/server/upload-*
 
 # NodeJS
 node_modules
