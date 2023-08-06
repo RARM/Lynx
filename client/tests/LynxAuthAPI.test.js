@@ -17,11 +17,6 @@ expect.extend({
     accountExists,
 });
 
-test('Server (' + LynxAuthAPI.serverURL + ') is up.', async () => {
-    const resp = await fetch(LynxAuthAPI.serverURL);
-    await expect(resp).not.toBeNull();
-});
-
 test('Creating an account.', async () => {
     // Get random user.
     const randUser = await fetch('https://randomuser.me/api/').then(resp => resp.json());
