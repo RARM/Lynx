@@ -143,5 +143,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Increase server upload file size
 # https://docs.djangoproject.com/en/4.2/ref/settings/#data-upload-max-memory-size
-DATA_UPLOAD_MAX_MEMORY_SIZE = None # 100 MB
-FILE_UPLOAD_MAX_MEMORY_SIZE =  95_000_000 
+DATA_UPLOAD_MAX_MEMORY_SIZE = None # No limit.
+FILE_UPLOAD_MAX_MEMORY_SIZE =  10_000_000_000 # 10 GB
