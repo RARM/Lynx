@@ -15,6 +15,7 @@ contextBridge.exposeInMainWorld(
     getGames: () => ipcRenderer.invoke('getGames'),
     setPurchaseGame: (gameid) => ipcRenderer.invoke('setPurchaseGame', gameid),
     getPurchaseGame: () => ipcRenderer.invoke('getPurchaseGame'),
+    uploadGame: (newGameConf) => ipcRenderer.invoke('uploadGame', newGameConf),
     unzip_game: () => ipcRenderer.invoke('unzipGame'),
     play_game: () => ipcRenderer.invoke('playGame')
   }

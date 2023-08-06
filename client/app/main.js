@@ -1,5 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
+const fs = require('fs');
 var exec = require('child_process').execFile;
 
 const LynxUtility = require('./classes/LynxUtility');
@@ -13,6 +14,7 @@ function createWindow () {
     height: 692,
     resizable: false,
     webPreferences: {
+      // devTools: false,
       preload: path.join(__dirname, 'preload.js')
     }
   });
@@ -87,6 +89,14 @@ ipcMain.handle('getPurchaseGame', async (_event) => {
 ipcMain.handle('getGames', async (_event) => {
   return LynxGamesAPI.getAllGames();
 });
+
+ipcMain.handle('uploadGame', async (_event, newGameConf) => {
+  console.log(newGameConf.gbin_info.path);
+  newGameConf.gbin = new File([fs.readFileSync(newGameConf.gbin_info.path)], newGameConf.gbin_info.name);
+  newGameConf.thumbnail = new File([fs.readFileSync(newGameConf.thumbnail_info.path)], newGameConf.thumbnail_info.name);
+  
+  return LynxGamesAPI.uploadGame(newGameConf, liveProgramData.lynxAuth.sessionid);
+})
 
 ipcMain.handle('unzipGame', async (event, arg) => {
   return new Promise(function(resolve, reject) {

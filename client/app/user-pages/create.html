@@ -131,7 +131,7 @@
             class="basic-layout-rectangle1"
           />
           <span class="basic-layout-text14"><span>Create Game</span></span>
-          <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+          <form id="uploadForm" action="#" method="post" enctype="multipart/form-data">
             <label for="gameName">Game Name:</label>
             <input type="text" id="gameName" name="gameName">
           
@@ -202,7 +202,33 @@
         </div>
       </div>
     </div>
-    <script src="../../assets/js/home.js"></script>
+    <script>
+      document.getElementById('uploadForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const form = document.getElementById('uploadForm');
+
+        const formData = new FormData(form);
+        const formProps = Object.fromEntries(formData);
+
+        let newGameConf = {
+          name: formProps.gameName,
+          description: formProps.gameDescription,
+          exepath: formProps.exePath,
+          gbin_info: {
+            path: formProps.gbin.path,
+            name: formProps.gbin.name
+          },
+          thumbnail_info: {
+            path: formProps.thumbnail.path,
+            name: formProps.thumbnail.name
+          }
+        };
+
+        window.lynx.uploadGame(newGameConf).then(succ => {
+          if (succ) window.location.href = "discovery.html";
+          else alert('There was an issue upload the game.');
+        });
+      });
+    </script>
   </body>
-  
 </html>
