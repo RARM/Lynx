@@ -133,7 +133,7 @@
             <span>Discover [Products]</span>
           </span>
           <span class="discover-product-page-text06">
-            <span>TRUCK TOWN</span>
+            <span id="game-name">TRUCK TOWN</span>
           </span>
           <div class="discover-product-page-frame3">
             <span class="discover-product-page-text08"><span>Games</span></span>
@@ -317,7 +317,7 @@
             <span>Made by (Studio)</span>
           </span>
           <span class="discover-product-page-text62">
-            <span>This product is offers the following:</span>
+            <span>This product is offers the following:</span> <span id="game-description"></span>
           </span>
           <span class="discover-product-page-text64"><span>Reviews</span></span>
           <span class="discover-product-page-text66">
@@ -360,8 +360,6 @@
       </div>
     </div>
     <script src="../../assets/js/home.js"></script>
-    <script>
-      window.lynx.getPurchaseGame().then(id => console.log(id));
-    </script>
+    <script src="../../assets/js/gamesUI.js"></script>
   </body>
 </html>
