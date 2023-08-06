@@ -6,6 +6,7 @@ async function loadPurchaseGameStore() {
         const gameInfo = games.find(elem => elem.id == gameId);
         document.getElementById('game-description').innerHTML = gameInfo.description;
         document.getElementById('game-name').innerHTML = gameInfo.name;
+        document.getElementById('game-thumbnail').src = 'https://api.lynxgamestore.com/games/thumbnail?id=' + gameId;
     }
 }
 
