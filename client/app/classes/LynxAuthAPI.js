@@ -1,6 +1,5 @@
 const HeaderUtils = require('./HeaderUtils');
-
-const urlLynxServer = 'http://127.0.0.1:8000'; // FIXME: Change to Lynx server for release.
+const urlLynxServer = require('../clientConfig.json').server;
 
 /**
  * Configuration object for creating an account.

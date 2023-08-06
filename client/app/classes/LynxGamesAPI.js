@@ -1,6 +1,5 @@
 const fs = require('fs');
-
-const urlLynxServer = 'http://127.0.0.1:8000'; // FIXME: Change to Lynx server for release.
+const urlLynxServer = require('../clientConfig.json').server;
 
 /**
  * Configuration object for new game.
@@ -21,17 +20,36 @@ class LynxGamesAPI {
 
     /**
      * Constructs an instance of the game management module for handling local
-     * installed games and configuration.
+     * installed games and configurations.
      * 
-     * @param {string} configFile 
-     * @param {string} username 
-     * @param {string} installPath 
+     * @param {string} configFile  Path to the config file.
+     * @param {string} username    The logged in user name (must match config).
     **/
-    constructor(configFile, username, installPath) {
-        // Code here...
+    constructor(configFile, username) {
+        this.configFilePath = configFile;
+        this.systemData;
+
+        let newAccount = false;
+        try {
+            this.systemData = JSON.parse(fs.readFileSync(configFile));
+        } catch (error) {
+            if (error.code === 'ENOENT') {
+                this.systemData = new Object();
+                this.systemData.username = username;
+                this.systemData.games = new Array();
+                
+                newAccount = true;
+            } else {
+                throw error;
+            }
+        } finally {
+            if (this.systemData.username != username || newAccount) {
+                fs.writeFileSync(configFile, JSON.stringify(this.systemData));
+            }
+        }
     }
     
-    async downloadGame(gameId) {
+    async downloadGame(gameId, execpath) {
         // Code here...
     }
     
