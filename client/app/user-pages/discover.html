@@ -337,7 +337,7 @@
             alt="Ellipse51981"
             class="basic-layout-ellipse5"
           />
-          <div class="basic-layout-container7">
+          <div class="basic-layout-container7" id="new-releases">
             <img
               src="../../assets/images/pages/rectangle691981-8rx-300h.png"
               alt="Rectangle691981"
@@ -373,6 +373,26 @@
       </div>
     </div>
     <script src="../../assets/js/home.js"></script>
+    <script src="../../assets/js/gamesUI.js"></script>
+    <script>
+      async function loadNewReleases() {
+        const serverURL = await window.lynx.getServerURL();
+        const games =  await window.lynx.getGames();
+
+        console.log(games);
+        console.log(serverURL);
+
+        // Populate new releases.
+        const row = document.getElementById('new-releases');
+        let placeHolders = row.children;
+
+        for (let i = games.length - 1, j = 0; i >= 0 && j < placeHolders.length; i--, j++) {
+          placeHolders[j].src = serverURL + '/games/thumbnail?id=' + games[i].id;
+        }
+      }
+
+      loadNewReleases();
+    </script>
   </body>
   
 </html>

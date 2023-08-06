@@ -4,6 +4,7 @@ var exec = require('child_process').execFile;
 
 const LynxUtility = require('./classes/LynxUtility');
 const LynxAuthAPI = require('./classes/LynxAuthAPI');
+const LynxGamesAPI = require('./classes/LynxGamesAPI');
 let liveProgramData = {}
 
 function createWindow () {
@@ -36,6 +37,7 @@ function createWindow () {
 
 app.whenReady().then(() => {
   liveProgramData.lynxAuth = new LynxAuthAPI();
+  liveProgramData.lynxGames;
   
   createWindow();
 
@@ -47,6 +49,11 @@ app.whenReady().then(() => {
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 })
+
+// Expose server URL.
+ipcMain.handle('getServerURL', async (_event) => {
+  return LynxGamesAPI.serverURL;
+});
 
 // Exposed functions for authentication.
 ipcMain.handle('createAccount', async (_event, newAccConf) => {
@@ -67,6 +74,10 @@ ipcMain.handle('getAccountInfo', async (_event) => {
 });
 
 // Exposed functions for game management.
+ipcMain.handle('getGames', async (_event) => {
+  return LynxGamesAPI.getAllGames();
+});
+
 ipcMain.handle('unzipGame', async (event, arg) => {
   return new Promise(function(resolve, reject) {
     unzipGame();
