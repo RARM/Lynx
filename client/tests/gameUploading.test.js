@@ -22,12 +22,15 @@ test('Create account, log in, and upload a game.', async () => {
     signed_in = await LynxAuth.signin(accountInfo.username, accountInfo.password);
     await expect(signed_in).toBeTruthy();
 
+    // let file = new File()
+    // new Buffer()
+
     const newGameConf = {
         name: 'Demo Game',
         description: 'This is a sample game.',
         exepath: '/demo-game.setup.exe.zip',
-        gbin: fs.readFileSync(require.resolve('../sample-files/demo-game.setup.exe.zip')),
-        thumbnail: fs.readFileSync(require.resolve('../sample-files/demo-thumb.png'))
+        gbin: new File([fs.readFileSync(require.resolve('../sample-files/demo-game.setup.exe.zip'))], 'demo-game.setup.exe.zip'),
+        thumbnail: new File([fs.readFileSync(require.resolve('../sample-files/demo-thumb.png'))], 'demo-thumb.png')
     }
 
     const gUploaded = await LynxGamesAPI.uploadGame(newGameConf, LynxAuth.sessionid);

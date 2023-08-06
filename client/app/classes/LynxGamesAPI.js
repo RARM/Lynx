@@ -59,9 +59,6 @@ class LynxGamesAPI {
             }
         });
 
-        const msg = await resp.text();
-        console.log(msg);
-
         return resp.status == 201;
     }
 
